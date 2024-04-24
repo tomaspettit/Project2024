@@ -1,0 +1,251 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-list>
+      <ion-item [routerLink]="['/sign-up']">
+    <ion-label>Sign Up</ion-label>
+  </ion-item>
+  <ion-item [routerLink]="['/sign-in']">
+    <ion-label>Sign In</ion-label>
+  </ion-item>
+  </ion-list>
+  </ion-header>
+  
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-content>
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-title style="font-size:35px;">Hot & Tasty</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content class="ion-padding">
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Chips</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="3" size-lg="1">Number</ion-col>
+            <ion-col size="4" size-md="3" size-lg="1">Name</ion-col>
+            <ion-col size="4" size-md="3" size-lg="1">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let c of chip">
+          <ion-row>
+            <ion-col size="4" size-md="3" size-lg="1">{{c.Number}}</ion-col>
+            <ion-col size="4" size-md="3" size-lg="1">{{c.Food}}</ion-col>
+            <ion-col size="4" size-md="3" size-lg="1">{{c.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Burger</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">Collect</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let b of burger">
+          <ion-row>
+            <ion-col size="3" size-md="2" size-lg="2">{{b.Number}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="2">{{b.Food}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="2">{{b.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Kebab</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let k of kebab">
+          <ion-row>
+            <ion-col size="3" size-md="2" size-lg="1">{{k.Number}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{k.Food}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{k.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fourth">
+      <ion-item slot="header" color="light">
+        <ion-label>Wraps</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let w of wrap">
+          <ion-row>
+            <ion-col size="3" size-md="2" size-lg="1">{{w.Number}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{w.Food}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{w.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fifth">
+      <ion-item slot="header" color="light">
+        <ion-label>Side Order</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let sd of sideOrder">
+          <ion-row>
+            <ion-col size="3" size-md="2" size-lg="1">{{sd.Number}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{sd.Food}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{sd.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="sixth">
+      <ion-item slot="header" color="light">
+        <ion-label>Fish</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let f of fish">
+          <ion-row>
+            <ion-col size="3" size-md="2" size-lg="1">{{f.Number}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{f.Food}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{f.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="seventh">
+      <ion-item slot="header" color="light">
+        <ion-label>Fried Chicken</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let fc of friedChicken">
+          <ion-row>
+            <ion-col size="3" size-md="2" size-lg="1">{{fc.Number}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{fc.Food}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{fc.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="eighth">
+      <ion-item slot="header" color="light">
+        <ion-label>Kids Meal</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let km of kMeal">
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="1">{{km.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{km.Price}}0</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="ninth">
+      <ion-item slot="header" color="light">
+        <ion-label>Meal Deals</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let md of mDeal">
+          <ion-row>
+            <ion-col size="3" size-md="2" size-lg="1">{{md.Number}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{md.Food}}</ion-col>
+            <ion-col size="3" size-md="2" size-lg="1">{{md.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="tenth">
+      <ion-item slot="header" color="light">
+        <ion-label>Beverages</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let bev of beverage">
+          <ion-row>
+            <ion-col size="4" size-md="2" size-lg="1">{{bev.Drink}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{bev.Price}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="eleventh">
+      <ion-item slot="header" color="light">
+        <ion-label>Sauces</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid [fixed]=true>
+          <ion-row>
+            <ion-col size="4" size-md="3" size-lg="1">Name</ion-col>
+            <ion-col size="4" size-md="3" size-lg="1">€</ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid [fixed]=true *ngFor="let s of sauce">
+          <ion-row>
+            <ion-col size="4" size-md="3" size-lg="1">{{s.Sauce}}</ion-col>
+            <ion-col size="4" size-md="3" size-lg="1">{{s.Price}}.00</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-title> Total € {{totalPrice}}</ion-title>
+  </ion-toolbar>
+</ion-footer>

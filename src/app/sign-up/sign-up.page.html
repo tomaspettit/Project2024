@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="warning">
+      <ion-title>Sign Up</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title><b>Create new account</b></ion-card-title>
+    <ion-item>
+      <ion-input [(ngModel)]="myEmail" label="Email input" type="email" placeholder="Enter your email"></ion-input>
+    </ion-item>
+    <ion-item>
+          <ion-input [(ngModel)]="myPassword" label="Enter your password" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="myPassword2" label="Password confirm" type="password"></ion-input>
+        </ion-item>
+    <ion-button (click)="signUp()">Sign Up</ion-button>
+    <ion-card-content>
+    Already have an account? <b><a href="/sign-in">Sign In</a></b>
+    </ion-card-content>
+  </ion-card-header>
+  </ion-card>
+</ion-content>

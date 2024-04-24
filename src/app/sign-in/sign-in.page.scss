@@ -1,0 +1,23 @@
+ion-content::part(background) {
+    background: #00b8ff;
+  }
+
+
+  ion-title{
+    text-align: center;
+    font-size: 35px;
+  }
+
+  ion-button{
+    height: 30px;
+    width: 120px;
+  }
+
+  ion-card{
+    margin-top:150px;
+  }
+
+  a{
+    color:black;
+    text-decoration: none;
+  }

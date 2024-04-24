@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>Sign In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="warning">
+      <ion-title>SignIn</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title><b>Sign in to your account</b></ion-card-title>
+    <ion-item>
+      <ion-input [(ngModel)]="myEmail" label="Email input" type="email" placeholder="Enter your email"></ion-input>
+    </ion-item>
+    <ion-item>
+          <ion-input [(ngModel)]="myPassword" label="Enter your password" type="password"></ion-input>
+        </ion-item>
+    Remember Me<ion-checkbox labelPlacement="start"></ion-checkbox>
+    <ion-button color="warning" (click)="signIn()">Sign In</ion-button><br>
+    <ion-card-content>
+    Forgot your account? <b><a href="/sign-up">Sign In</a></b>
+    </ion-card-content>
+  </ion-card-header>
+  </ion-card>
+</ion-content>
