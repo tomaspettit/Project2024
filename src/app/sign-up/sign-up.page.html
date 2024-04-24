@@ -15,18 +15,21 @@
   </ion-header>
 <ion-card>
   <ion-card-header>
-    <ion-card-title><b>Create new account</b></ion-card-title>
+    <ion-card-title id="ct"><b>Create new account</b></ion-card-title><br>
     <ion-item>
-      <ion-input [(ngModel)]="myEmail" label="Email input" type="email" placeholder="Enter your email"></ion-input>
-    </ion-item>
+      <ion-icon slot="start" style="margin-top:35px;" name="person" color="secondary"></ion-icon>
+      <ion-input [(ngModel)]="myEmail" label="Email" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" type="email" placeholder="Enter your email"></ion-input>
+    </ion-item><br>
     <ion-item>
-          <ion-input [(ngModel)]="myPassword" label="Enter your password" type="password"></ion-input>
-        </ion-item>
+      <ion-icon slot="start" style="margin-top:35px" name="lock-closed" color="secondary"></ion-icon>
+          <ion-input [(ngModel)]="myPassword" label="Password" label-placement="floating" fill="solid" type="password" placeholder="Enter your password"></ion-input>
+        </ion-item><br>
         <ion-item>
-          <ion-input [(ngModel)]="myPassword2" label="Password confirm" type="password"></ion-input>
-        </ion-item>
-    <ion-button (click)="signUp()">Sign Up</ion-button>
-    <ion-card-content>
+          <ion-icon slot="start" style="margin-top:35px" name="lock-closed" color="secondary"></ion-icon>
+          <ion-input [(ngModel)]="myPassword2" label="Password Confirm" label-placement="floating" fill="solid" type="password" placeholder="Enter your confirm password"></ion-input>
+        </ion-item><br>
+    <ion-button id="bs2" shape="round" (click)="signUp()">Sign Up</ion-button><br>
+    <ion-card-content style="font-size:20px;">
     Already have an account? <b><a href="/sign-in">Sign In</a></b>
     </ion-card-content>
   </ion-card-header>

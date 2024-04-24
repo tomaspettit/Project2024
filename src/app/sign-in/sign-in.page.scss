@@ -21,3 +21,24 @@ ion-content::part(background) {
     color:black;
     text-decoration: none;
   }
+
+  ion-checkbox{
+    --size:20px;
+  }
+
+  #l1{
+    margin-right: 160px;
+  }
+
+  #ct2{
+    font-size:35px;
+    text-align: center;
+    line-height: 0.8;
+  }
+
+  #bs{
+    font-size: 20px;
+    letter-spacing: 9.5px;
+    width:350px;
+    max-height: 30px;
+  }

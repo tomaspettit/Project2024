@@ -16,9 +16,10 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
- <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']">Browser Menu</ion-button><br><br>
+ <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']">Browser Menu
+  <ion-icon slot="start" name="book"></ion-icon>
+ </ion-button><br><br>
   <ion-label class="label1">OPENING TIMES</ion-label>
-  <ion-list id="styleList">
     <ion-item id="styleItem">
       <ion-label>Mon - Thurs: 4pm to 12am</ion-label>
     </ion-item>
@@ -27,8 +28,9 @@
     </ion-item>
     <ion-item id="styleItem">
       <ion-label>Sun: 4pm to 12am</ion-label>
-    </ion-item>
-    </ion-list><hr>
+    </ion-item><hr>
+    <ion-label style="font-size: 30px;" class="ps"><b>Phone No: 090 662 1765</b></ion-label><br>
+    <ion-label style="font-size:30px;" class="as"><b>Main St., Creggs, F42EH10</b></ion-label><br>
       <ion-button size="large" color="light" class="SignUpStyle" [routerLink]="['/sign-up']">Sign Up</ion-button>
-      <ion-button size="large" color="tertiary"  [routerLink]="['/sign-in']">Sign In</ion-button>
+      <ion-button size="large" color="tertiary" class="SignUpStyle" [routerLink]="['/sign-in']">Sign In</ion-button>
 </ion-content>

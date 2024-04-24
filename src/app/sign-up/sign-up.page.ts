@@ -6,6 +6,9 @@ import { RouterLinkWithHref } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
+import { addIcons } from 'ionicons';
+import{person} from 'ionicons/icons';
+import { lockClosed } from 'ionicons/icons';
 
 @Component({
   selector: 'app-sign-up',
@@ -19,7 +22,9 @@ export class SignUpPage implements OnInit {
   myPassword: string = '';
   myPassword2: string = '';
 
-  constructor(private alertController: AlertController, private storage:Storage, private router:Router) {}
+  constructor(private alertController: AlertController, private storage:Storage, private router:Router) {
+    addIcons({person, lockClosed});
+  }
 
   async signUp() {
     if (this.myEmail == '' && this.myPassword == '') {
@@ -38,7 +43,13 @@ export class SignUpPage implements OnInit {
       await alert.present();
     } else {
       await this.storage.create();
-      await this.storage.set("signed", {"email": this.myEmail, "password": this.myPassword})
+      await this.storage.set("email", this.myEmail)
+      .then(()=>{
+        this.router.navigate(['/menu']);
+      }).catch((error)=>{
+        console.log(error);
+      });
+      await this.storage.set("password", this.myPassword)
       .then(()=>{
         this.router.navigate(['/menu']);
       }).catch((error)=>{
