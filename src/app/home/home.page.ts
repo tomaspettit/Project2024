@@ -14,4 +14,24 @@ import { Browser } from '@capacitor/browser';
 })
 export class HomePage {
   constructor() {}
+
+  async openMartinos(){
+    await Browser.open({url: 'https://www.martinos.ie/'});
+  };
+
+  async openNicos(){
+    await Browser.open({url: 'http://nicostakeaway.com/'});
+  };
+
+  async openSupermacs(){
+    await Browser.open({url: 'https://supermacs.ie/'});
+  };
+
+  async openVillageKitchen(){
+    await Browser.open({url: 'https://www.lunchtime.ie/'});
+  };
+
+  async openMcDonalds(){
+    await Browser.open({url: 'https://www.mcdonalds.com/'});
+  };
 }

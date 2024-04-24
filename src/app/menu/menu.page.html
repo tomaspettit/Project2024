@@ -1,3 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-buttons>
+    <ion-back-button defaultHref="/hthome"></ion-back-button>
+    <ion-title>Hot & Tasty</ion-title>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-menu side="end" contentId="main-content">
   <ion-header>
     <ion-list>
@@ -9,13 +18,13 @@
   </ion-item>
   </ion-list>
   </ion-header>
-  
 </ion-menu>
+
 <div class="ion-page" id="main-content">
-  <ion-content>
-  <ion-header>
+  <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
     <ion-toolbar color="warning">
-      <ion-title style="font-size:35px;">Hot & Tasty</ion-title>
+      <ion-title>Hot & Tasty</ion-title>
       <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -30,16 +39,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
-            <ion-col size="4" size-md="3" size-lg="1">Number</ion-col>
-            <ion-col size="4" size-md="3" size-lg="1">Name</ion-col>
-            <ion-col size="4" size-md="3" size-lg="1">€</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">Number</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let c of chip">
           <ion-row>
-            <ion-col size="4" size-md="3" size-lg="1">{{c.Number}}</ion-col>
-            <ion-col size="4" size-md="3" size-lg="1">{{c.Food}}</ion-col>
-            <ion-col size="4" size-md="3" size-lg="1">{{c.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{c.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{c.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{c.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -51,16 +60,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Number</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
-            <ion-col size="4" size-md="2" size-lg="2">Collect</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let b of burger">
           <ion-row>
-            <ion-col size="3" size-md="2" size-lg="2">{{b.Number}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="2">{{b.Food}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="2">{{b.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{b.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{b.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{b.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -72,15 +81,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Number</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let k of kebab">
           <ion-row>
-            <ion-col size="3" size-md="2" size-lg="1">{{k.Number}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{k.Food}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{k.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{k.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{k.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{k.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -92,15 +102,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Number</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let w of wrap">
           <ion-row>
-            <ion-col size="3" size-md="2" size-lg="1">{{w.Number}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{w.Food}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{w.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{w.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{w.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{w.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -112,15 +123,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Number</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let sd of sideOrder">
           <ion-row>
-            <ion-col size="3" size-md="2" size-lg="1">{{sd.Number}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{sd.Food}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{sd.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{sd.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{sd.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{sd.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -132,15 +144,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
+            <ion-col size="4" size-md="2" size-lg="2">Number</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let f of fish">
           <ion-row>
-            <ion-col size="3" size-md="2" size-lg="1">{{f.Number}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{f.Food}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{f.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{f.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{f.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="2">{{f.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -152,15 +165,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
+            <ion-col size="4" size-md="2" size-lg="1">Number</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
             <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let fc of friedChicken">
           <ion-row>
-            <ion-col size="3" size-md="2" size-lg="1">{{fc.Number}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{fc.Food}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{fc.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{fc.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{fc.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{fc.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -172,14 +186,14 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
-            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
-            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">Name</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let km of kMeal">
           <ion-row>
-            <ion-col size="4" size-md="2" size-lg="1">{{km.Food}}</ion-col>
-            <ion-col size="4" size-md="2" size-lg="1">{{km.Price}}0</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">{{km.Food}}</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">{{km.Price}}0</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -191,15 +205,16 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
-            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
-            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">Number</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">Name</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let md of mDeal">
           <ion-row>
-            <ion-col size="3" size-md="2" size-lg="1">{{md.Number}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{md.Food}}</ion-col>
-            <ion-col size="3" size-md="2" size-lg="1">{{md.Price}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{md.Number}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{md.Food}}</ion-col>
+            <ion-col size="4" size-md="2" size-lg="1">{{md.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -211,14 +226,14 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
-            <ion-col size="4" size-md="2" size-lg="2">Name</ion-col>
-            <ion-col size="4" size-md="2" size-lg="2">€</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">Name</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let bev of beverage">
           <ion-row>
-            <ion-col size="4" size-md="2" size-lg="1">{{bev.Drink}}</ion-col>
-            <ion-col size="4" size-md="2" size-lg="1">{{bev.Price}}</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">{{bev.Drink}}</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">{{bev.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
@@ -230,22 +245,128 @@
       <div class="ion-padding" slot="content">
         <ion-grid [fixed]=true>
           <ion-row>
-            <ion-col size="4" size-md="3" size-lg="1">Name</ion-col>
-            <ion-col size="4" size-md="3" size-lg="1">€</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">Name</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">€</ion-col>
           </ion-row>
         </ion-grid>
         <ion-grid [fixed]=true *ngFor="let s of sauce">
           <ion-row>
-            <ion-col size="4" size-md="3" size-lg="1">{{s.Sauce}}</ion-col>
-            <ion-col size="4" size-md="3" size-lg="1">{{s.Price}}.00</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">{{s.Sauce}}</ion-col>
+            <ion-col size="6" size-md="4" size-lg="2">{{s.Price}}</ion-col>
           </ion-row>
         </ion-grid>
       </div>
     </ion-accordion>
-  </ion-accordion-group>
+  </ion-accordion-group><hr><hr>
+  <ion-label>ALLERGEN</ion-label>
+  <ion-list>
+    <ion-item>
+      <ion-badge slot="start">CE</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">GW</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">CR</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">EG</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">FI</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">LU</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">MK</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">MO</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">MU</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">N</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">PE</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">SE</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">SY</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">SO</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">S</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">WF</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">LF</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">LSF</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">VE</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">V</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">DF</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">NA</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">LS</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">SY</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">GF</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">M</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">EGF</ion-badge>
+      <ion-label></ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
-<ion-footer>
-  <ion-toolbar color="warning">
-    <ion-title> Total € {{totalPrice}}</ion-title>
-  </ion-toolbar>
-</ion-footer>
