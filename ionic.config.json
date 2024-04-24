@@ -1,0 +1,7 @@
+{
+  "name": "MultiTakeawayApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
