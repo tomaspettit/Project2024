@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
+import { addIcons } from 'ionicons';
+import { home } from 'ionicons/icons';
+import { logIn } from 'ionicons/icons';
+import { personAdd } from 'ionicons/icons';
+import { card } from 'ionicons/icons';
 
 //API Food Menu
 import { FoodMenuService } from '../Services/food-menu.service';
@@ -34,7 +39,9 @@ export class MenuPage implements OnInit {
     this.isModalOpen = isOpen;
   }
 
-  constructor(private fm: FoodMenuService) { }
+  constructor(private fm: FoodMenuService) { 
+    addIcons({home, personAdd, logIn, card});
+  }
 
   ngOnInit(): void {
     this.fm.GetFoodData().subscribe(

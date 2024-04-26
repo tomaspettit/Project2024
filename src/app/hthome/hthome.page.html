@@ -1,15 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="warning">
-    <ion-buttons>
-    <ion-back-button defaultHref="/"></ion-back-button>
-    <ion-title>Hot & Tasty</ion-title>
-  </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
     <ion-toolbar>
+      <ion-menu-toggle>
+        <ion-button class="b1" size="large" [routerLink]="['/home']">
+          <ion-icon slot="start" name="home"></ion-icon>
+            Home
+        </ion-button>
+        <ion-button class="b1" size="large" [routerLink]="['/payment']">
+          <ion-icon slot="start" name="card"></ion-icon>
+            Order
+        </ion-button>
+      <ion-button class="b1" size="large" [routerLink]="['/sign-up']">
+        <ion-icon slot="start" name="person-add"></ion-icon>
+    Sign Up
+  </ion-button>
+  <ion-button class="b1" size="large" [routerLink]="['/sign-in']">
+    <ion-icon slot="start" name="log-in"></ion-icon>
+    Sign In
+  </ion-button>
+</ion-menu-toggle>
+</ion-toolbar>
+  </ion-header>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar color="warning">
       <ion-title size="large">Hot & Tasty</ion-title>
       <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
@@ -31,6 +48,5 @@
     </ion-item><hr>
     <ion-label style="font-size: 30px;" class="ps"><b>Phone No: 090 662 1765</b></ion-label><br>
     <ion-label style="font-size:30px;" class="as"><b>Main St., Creggs, F42EH10</b></ion-label><br>
-      <ion-button size="large" color="light" class="SignUpStyle" [routerLink]="['/sign-up']">Sign Up</ion-button>
-      <ion-button size="large" color="tertiary" class="SignUpStyle" [routerLink]="['/sign-in']">Sign In</ion-button>
 </ion-content>
+</div>

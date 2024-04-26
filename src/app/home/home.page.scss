@@ -96,3 +96,56 @@ div{
   border-color: black;
   border-radius: 90px;
 }
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  height: 170px;
+  width: 400px;
+
+  margin: 0 auto;
+}
+
+b {
+  width: 100%;
+}
+
+.ripple-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #ddd;
+
+  user-select: none;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: orange;
+  font-size: 20px;
+  color:white;
+  border-color: black;
+}
+
+.circle2 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: orange;
+  font-size: 20px;
+  color:white;
+  font-style: italic;
+  font-weight: bold;
+  border-color: black;
+}

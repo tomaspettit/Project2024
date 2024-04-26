@@ -5,6 +5,10 @@ import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { book } from 'ionicons/icons';
+import { logIn } from 'ionicons/icons';
+import { personAdd } from 'ionicons/icons';
+import { home } from 'ionicons/icons';
+import { card } from 'ionicons/icons';
 
 @Component({
   selector: 'app-hthome',
@@ -16,7 +20,7 @@ import { book } from 'ionicons/icons';
 export class HTHomePage implements OnInit {
 
   constructor() { 
-    addIcons({book});
+    addIcons({book, logIn, personAdd, home, card});
   }
 
   ngOnInit() {

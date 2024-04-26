@@ -1,29 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="warning">
-    <ion-buttons>
-    <ion-back-button defaultHref="/hthome"></ion-back-button>
-    <ion-title>Hot & Tasty</ion-title>
-  </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-menu side="end" contentId="main-content">
   <ion-header>
-    <ion-list>
-      <ion-item [routerLink]="['/sign-up']">
-    <ion-label>Sign Up</ion-label>
-  </ion-item>
-  <ion-item [routerLink]="['/sign-in']">
-    <ion-label>Sign In</ion-label>
-  </ion-item>
-  </ion-list>
+    <ion-toolbar>
+      <ion-menu-toggle>
+        <ion-button class="b2" size="large" [routerLink]="['/home']">
+          <ion-icon slot="start" name="home"></ion-icon>
+            Home
+        </ion-button>
+        <ion-button class="b2" size="large" [routerLink]="['/payment']">
+          <ion-icon slot="start" name="card"></ion-icon>
+            Order
+        </ion-button>
+      <ion-button class="b2" size="large" [routerLink]="['/sign-up']">
+        <ion-icon slot="start" name="person-add"></ion-icon>
+    Sign Up
+  </ion-button>
+  <ion-button class="b2" size="large" [routerLink]="['/sign-in']">
+    <ion-icon slot="start" name="log-in"></ion-icon>
+    Sign In
+  </ion-button>
+</ion-menu-toggle>
+</ion-toolbar>
   </ion-header>
 </ion-menu>
+
 <div class="ion-page" id="main-content">
   <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar color="warning">
-      <ion-title>Hot & Tasty</ion-title>
+      <ion-title [routerLink]="['/hthome']">Hot & Tasty</ion-title>
       <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -32,7 +36,7 @@
 <ion-content class="ion-padding">
   <ion-accordion-group>
     <ion-accordion value="first">
-      <ion-item slot="header" color="light">
+      <ion-item slot="header" color="warning">
         <ion-label>Chips</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -53,7 +57,7 @@
       </div>
     </ion-accordion>
     <ion-accordion value="second">
-      <ion-item slot="header" color="light">
+      <ion-item slot="header" color="danger">
         <ion-label>Burger</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -256,116 +260,123 @@
         </ion-grid>
       </div>
     </ion-accordion>
-  </ion-accordion-group><hr><hr>
-  <ion-label>ALLERGEN</ion-label>
-  <ion-list>
-    <ion-item>
-      <ion-badge slot="start">CE</ion-badge>
-      <ion-label></ion-label>
+  <ion-accordion value="twelveth">
+    <ion-item slot="header" color="light">
+      <ion-label>ALLERGEN</ion-label>
     </ion-item>
-    <ion-item>
-      <ion-badge slot="start">GW</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">CR</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">EG</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">FI</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">LU</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">MK</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">MO</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">MU</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">N</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">PE</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">SE</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">SY</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">SO</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">S</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">WF</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">LF</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">LSF</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">VE</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">V</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">DF</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">NA</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">LS</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">SY</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">GF</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">M</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-badge slot="start">EGF</ion-badge>
-      <ion-label></ion-label>
-    </ion-item>
-  </ion-list>
+    <div class="ion-padding" slot="content">
+      <ion-list>
+        <ion-item>
+          <ion-badge slot="start">CE</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">GW</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">CR</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">EG</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">FI</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">LU</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">MK</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">MO</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">MU</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">N</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">PE</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">SE</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">SY</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">SO</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">S</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">WF</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">LF</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">LSF</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">VE</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">V</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">DF</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">NA</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">LS</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">SY</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">GF</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">M</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-badge slot="start">EGF</ion-badge>
+          <ion-label></ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-accordion>
+</ion-accordion-group><hr><hr>
+  
 </ion-content>

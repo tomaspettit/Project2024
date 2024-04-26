@@ -10,12 +10,44 @@
   </ion-header>
   <br><ion-label class="label2">Hello & Welcome to the<br>Multi-Takeaway</ion-label>
   <br><ion-label class="label3">Please select your online takeaway</ion-label><br>
-  <ion-button shape="round" id="button1"  color="warning" [routerLink]="['/hthome']">Hot & Tasty Takeaway</ion-button>
-  <ion-button shape="round" id="button1" class="textStyle" color="primary" (click)="openMartinos()">MARTINO'S</ion-button>
-  <ion-button shape="round" id="button1" class="textStyle" color="success" (click)="openNicos()">NICO'S</ion-button>
-  <ion-button shape="round" id="button1" color="white" (click)="openSupermacs()"><img class="imageStyle" src="https://thatsfarming.com/wp-content/uploads/2020/09/28992-Supermacsresize.jpg" width="500" height="50"></ion-button>
-  <ion-button shape="round" id="button1" color="medium" (click)="openVillageKitchen()"><img src="https://th.bing.com/th/id/OLC.CoXON4WTKjzykg480x360?&rs=1&pid=ImgDetMain" width="500" height="90"></ion-button>
-  <ion-button shape="round" id="button1" color="danger" (click)="openMcDonalds()"><img src="https://th.bing.com/th/id/OIP.-OIcSOicRhmkasl_oOdWLAHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="500" height="90"></ion-button>
+  <div class="wrapper">
+    <div class="ion-activatable ripple-parent circle2" id="t1" style="background-color: orange;" [routerLink]="['/hthome']">
+      Hot & Tasty Takeaway
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle2"  style="background-color: blue;" (click)="openMartinos()">
+      MARTION's
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle2"  style="background-color: rgb(54, 185, 54);" (click)="openNicos()">
+      NICO's
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openSupermacs()">
+      <img class="imageStyle" src="https://thatsfarming.com/wp-content/uploads/2020/09/28992-Supermacsresize.jpg" width="500" height="50">
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle"  style="background-color: rgb(64, 48, 48);" (click)="openVillageKitchen()">
+      <img src="https://th.bing.com/th/id/OLC.CoXON4WTKjzykg480x360?&rs=1&pid=ImgDetMain" width="500" height="90">
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle"  style="background-color: rgb(198, 26, 26);" (click)="openMcDonalds()">
+      <img src="https://th.bing.com/th/id/OIP.-OIcSOicRhmkasl_oOdWLAHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="500" height="90">
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openDominos()">
+      <img src="https://th.bing.com/th/id/OIP.yflqvaWi55O1Ru4gqkO3sgHaHZ?w=171&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="500" height="90">
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openSubway()">
+      <img src="https://s.yimg.com/uu/api/res/1.2/0kBtW8uitxPrToRghBbPOw--~B/aD0yODgwO3c9MTQ0ODI7c209MTthcHBpZD15dGFjaHlvbg--/http://globalfinance.zenfs.com/en_us/Finance/US_AFTP_SILICONALLEY_H_LIVE/Subway_has_a_new_logo-c8ce92b6739b06da203bab9e33c9e28d" width="120" height="50">
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openBurgerKing()">
+      <img src="https://th.bing.com/th/id/R.38ddc9a8f4dca31bb8751d1a2c9b06ea?rik=7j7UJKnpNudqww&riu=http%3a%2f%2fimages5.fanpop.com%2fimage%2fphotos%2f31100000%2fBurger-King-burger-king-31124846-600-600.png&ehk=DBu%2byCXSMEZpzv8ZKWqNu6rCL5QgqMuQDhXJiuhR7PE%3d&risl=&pid=ImgRaw&r=0" width="90" height="90">
+      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+    </div>
+</div>
   
   <!--<br><br><ion-label class="label1">OPENING TIMES</ion-label>
   <ion-list id="styleList">

@@ -34,4 +34,16 @@ export class HomePage {
   async openMcDonalds(){
     await Browser.open({url: 'https://www.mcdonalds.com/'});
   };
+
+  async openDominos(){
+    await Browser.open({url: 'https://www.dominos.ie/'});
+  };
+
+  async openSubway(){
+    await Browser.open({url: 'https://www.subway.com/'});
+  };
+
+  async openBurgerKing(){
+    await Browser.open({url: 'https://www.whopper.ie/'});
+  };
 }
