@@ -1,0 +1,27 @@
+ion-title{
+    text-align: start;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(42, 189, 42);
+    font-size:28px;
+  }
+  
+  .b3{
+    margin-top: 20px;
+    width:280px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  ion-content::part(background) {
+    background: #00ff73;
+  }
+
+  div{
+    text-align: center;
+  }
+
+  ion-card{
+    margin-top: 150px;
+  }

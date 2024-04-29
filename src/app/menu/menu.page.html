@@ -27,7 +27,7 @@
   <ion-content [fullscreen]="true">
   <ion-header>
     <ion-toolbar color="warning">
-      <ion-title [routerLink]="['/hthome']">Hot & Tasty</ion-title>
+      <ion-title [routerLink]="['/hthome']" class="titleStyle">Hot & Tasty</ion-title>
       <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -35,8 +35,8 @@
   </ion-header>
 <ion-content class="ion-padding">
   <ion-accordion-group>
-    <ion-accordion value="first" style="background-color: rgb(238, 238, 48);">
-      <ion-item slot="header" color="tint">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
         <ion-label style="color: red;" class="l3">Chips</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -73,7 +73,7 @@
     </ion-accordion>
     <ion-accordion value="fourth">
       <ion-item slot="header" color="success">
-        <ion-label style="color: rgb(245, 179, 56);" class="l3">Wraps</ion-label>
+        <ion-label style="color: rgb(227, 201, 152);" class="l3">Wraps</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <ion-list *ngFor="let w of wrap">
@@ -121,7 +121,7 @@
     </ion-accordion>
     <ion-accordion value="eighth">
       <ion-item slot="header" color="warning">
-        <ion-label class="l3">Kids Meal</ion-label>
+        <ion-label class="l3" color="danger">Kids Meal</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <ion-list *ngFor="let km of kMeal">
@@ -132,7 +132,7 @@
     </ion-accordion>
     <ion-accordion value="ninth">
       <ion-item slot="header" color="danger">
-        <ion-label class="l3">Meal Deals</ion-label>
+        <ion-label class="l3" color="warning">Meal Deals</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <ion-list *ngFor="let md of mDeal">
@@ -144,7 +144,7 @@
     </ion-accordion>
     <ion-accordion value="tenth">
       <ion-item slot="header" color="warning">
-        <ion-label class="l3">Beverages</ion-label>
+        <ion-label class="l3" color="danger">Beverages</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <ion-list *ngFor="let bv of beverage">
@@ -155,7 +155,7 @@
     </ion-accordion>
     <ion-accordion value="eleventh">
       <ion-item slot="header" color="success">
-        <ion-label class="l3">Sauces</ion-label>
+        <ion-label class="l3" color="warning">Sauces</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <ion-list *ngFor="let s of sauce">
@@ -166,7 +166,7 @@
     </ion-accordion>
   <ion-accordion value="twelveth">
     <ion-item slot="header" color="light">
-      <ion-label class="l3">ALLERGEN</ion-label>
+      <ion-label class="l3" color="danger">FOOD ALLERGY - WARNING & SYMBOLS</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
       <ion-list>
@@ -215,6 +215,7 @@
           <ion-badge slot="start" style="background-color: #28bb50;">N</ion-badge>
           <ion-label>Nuts</ion-label>
         </ion-item>
+        <p>19, 20, 21</p>
         <ion-item>
           <ion-badge slot="start" color="dark">PE</ion-badge>
           <ion-label>Peanuts</ion-label>
@@ -223,22 +224,27 @@
           <ion-badge slot="start" color="success">SE</ion-badge>
           <ion-label>Sesame</ion-label>
         </ion-item>
+        <p>9, 10, 11, 12, 13, 14, 15, 16, 17</p>
         <ion-item>
           <ion-badge slot="start" color="secondary">SY</ion-badge>
           <ion-label>Soy</ion-label>
         </ion-item>
+        <p>2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26</p>
         <ion-item>
           <ion-badge slot="start" color="medium">SO</ion-badge>
           <ion-label>Sulphur Dioxide</ion-label>
         </ion-item>
+        <p>18, 19, 20, 21, 22, 24, 25, 26, 27, 28</p>
         <ion-item>
           <ion-badge slot="start" color="light">S</ion-badge>
           <ion-label>Low Sugar</ion-label>
         </ion-item>
+        <p>2, 3, 4, 5, 6, 7, 18</p>
         <ion-item>
           <ion-badge slot="start" color="light">WF</ion-badge>
           <ion-label>Wheat Free</ion-label>
         </ion-item>
+        <p>36</p>
         <ion-item>
           <ion-badge slot="start" color="light">LF</ion-badge>
           <ion-label></ion-label>
@@ -247,6 +253,7 @@
           <ion-badge slot="start" color="light">LSF</ion-badge>
           <ion-label>Low Saturate Fat</ion-label>
         </ion-item>
+        <p>2</p>
         <ion-item>
           <ion-badge slot="start" color="light">VE</ion-badge>
           <ion-label>Vegan</ion-label>
@@ -255,10 +262,12 @@
           <ion-badge slot="start" color="light">V</ion-badge>
           <ion-label>Vegetarian</ion-label>
         </ion-item>
+        <p>2, 3, 4, 5</p>
         <ion-item>
           <ion-badge slot="start" color="light">DF</ion-badge>
           <ion-label>Dairy Free</ion-label>
         </ion-item>
+        <p>2, 3, 36</p>
         <ion-item>
           <ion-badge slot="start" color="light">NA</ion-badge>
           <ion-label>Low Sodium</ion-label>
@@ -267,6 +276,7 @@
           <ion-badge slot="start" color="light">LS</ion-badge>
           <ion-label>Low Salt</ion-label>
         </ion-item>
+        <p>18, 19, 20, 21, 23, 26</p>
         <ion-item>
           <ion-badge slot="start" color="light">SY</ion-badge>
           <ion-label>Soya</ion-label>
@@ -279,6 +289,7 @@
           <ion-badge slot="start" color="light">M</ion-badge>
           <ion-label>Milk</ion-label>
         </ion-item>
+        <p>18, 19, 20, 21, 24, 25, 26, 38</p>
         <ion-item>
           <ion-badge slot="start" color="light">EGF</ion-badge>
           <ion-label>Egg Free</ion-label>

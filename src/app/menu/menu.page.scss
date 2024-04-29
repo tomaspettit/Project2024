@@ -1,6 +1,3 @@
-ion-title{
-    text-align: center;
-}
 
 ion-col {
     background-color: #135d54;
@@ -11,7 +8,7 @@ ion-col {
   }
 
   ion-content::part(background) {
-    background: #00b8ff;
+    background: #00ff73;
   }
 
   .b2{
@@ -21,15 +18,21 @@ ion-col {
     margin-left: 10px;
   }
 
-  ion-title{
+  .titleStyle{
     text-align: start;
     text-transform: uppercase;
     font-style: italic;
     font-weight: bold;
-    color: white;
-    
+    color: rgb(42, 189, 42);
+    font-size:28px;
   }
 
   .l3{
     font-weight: bold;
+  }
+
+  ion-badge {
+    --color: white;
+    --padding-end: 10px;
+    --padding-start: 10px;
   }

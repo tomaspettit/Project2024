@@ -12,6 +12,9 @@
   font-size: 20px;
   line-height: 26px;
 }
+#t1{
+  color: rgb(42, 189, 42);
+}
 
 #container p {
   font-size: 16px;
@@ -25,6 +28,7 @@
 #container a {
   text-decoration: none;
 }
+
 
 ion-button{
   margin-top: 75px;
@@ -44,7 +48,7 @@ ion-item{
 }
 
 ion-content::part(background) {
-  background: #ebf6fa;
+  background: #00b8ff;
 }
 
 div{
@@ -108,7 +112,7 @@ div{
   height: 170px;
   width: 400px;
 
-  margin: 0 auto;
+  margin: 70px auto;
 }
 
 b {
