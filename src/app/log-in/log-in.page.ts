@@ -11,13 +11,13 @@ import{person} from 'ionicons/icons';
 import { lockClosed } from 'ionicons/icons';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.page.html',
-  styleUrls: ['./sign-in.page.scss'],
+  selector: 'app-log-in',
+  templateUrl: './log-in.page.html',
+  styleUrls: ['./log-in.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
 })
-export class SignInPage implements OnInit {
+export class LogInPage implements OnInit {
   myEmail:string="";
   myPassword:string="";
   e2:string="";

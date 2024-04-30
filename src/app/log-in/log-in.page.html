@@ -15,20 +15,20 @@
   </ion-header>
 <ion-card>
   <ion-card-header>
-    <ion-card-title id="ct2"><b>Sign in to your account</b></ion-card-title><br>
+    <ion-card-title id="ct2"><b>Log in to your account</b></ion-card-title><br>
     <ion-item>
       <ion-icon slot="start" name="person" color="secondary"></ion-icon>
-      <ion-input [(ngModel)]="e2" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" label="Email input" type="email" placeholder="Enter your email"></ion-input>
+      <ion-input [clearInput]="true" [(ngModel)]="e2" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" label="Email input" type="email" placeholder="Enter your email"></ion-input>
     </ion-item><br>
     <ion-item>
       <ion-icon slot="start" name="lock-closed" color="secondary"></ion-icon>
-          <ion-input [(ngModel)]="p2" label="Enter your password" label-placement="floating" fill="solid" type="password"></ion-input>
+          <ion-input [clearInput]="true" [(ngModel)]="p2" label="Enter your password" label-placement="floating" fill="solid" type="password"></ion-input>
         </ion-item><br>
         <ion-item>
           <ion-label id="l1" slot="end">Remember Me</ion-label>
           <ion-checkbox></ion-checkbox>
         </ion-item><br>
-    <ion-button id="bs" shape="round" (click)="signIn()">Sign In</ion-button><br>
+    <ion-button id="bs" shape="round" (click)="signIn()"><b>Log In</b></ion-button><br>
     <ion-card-content style="font-size:20px;">
     Forgot your account? <b><a href="/sign-up">Sign Up</a></b>
     </ion-card-content>

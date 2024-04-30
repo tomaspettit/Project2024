@@ -32,13 +32,6 @@ export class MenuPage implements OnInit {
   sideOrder:any=[];
   wrap:any=[];
 
-  totalPrice:number=0;
-  isModalOpen = false;
-
-  setOpen(isOpen: boolean) {
-    this.isModalOpen = isOpen;
-  }
-
   constructor(private fm: FoodMenuService) { 
     addIcons({home, personAdd, logIn, card});
   }

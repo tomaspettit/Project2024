@@ -13,22 +13,22 @@
       <ion-title>Sign Up</ion-title>
     </ion-toolbar>
   </ion-header>
-<ion-card>
+<ion-card style="margin-bottom:30px">
   <ion-card-header>
     <ion-card-title id="ct"><b>Create new account</b></ion-card-title><br>
     <ion-item>
       <ion-icon slot="start" style="margin-top:35px;" name="person" color="secondary"></ion-icon>
-      <ion-input [(ngModel)]="myEmail" label="Email" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" type="email" placeholder="Enter your email"></ion-input>
+      <ion-input [clearInput]="true" [(ngModel)]="myEmail" label="Email" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" type="email" placeholder="Enter your email"></ion-input>
     </ion-item><br>
     <ion-item>
       <ion-icon slot="start" style="margin-top:35px" name="lock-closed" color="secondary"></ion-icon>
-          <ion-input [(ngModel)]="myPassword" label="Password" label-placement="floating" fill="solid" type="password" placeholder="Enter your password"></ion-input>
+          <ion-input [clearInput]="true" [(ngModel)]="myPassword" label="Password" label-placement="floating" fill="solid" type="password" placeholder="Enter your password"></ion-input>
         </ion-item><br>
         <ion-item>
           <ion-icon slot="start" style="margin-top:35px" name="lock-closed" color="secondary"></ion-icon>
-          <ion-input [(ngModel)]="myPassword2" label="Password Confirm" label-placement="floating" fill="solid" type="password" placeholder="Enter your confirm password"></ion-input>
+          <ion-input [clearInput]="true" [(ngModel)]="myPassword2" label="Password Confirm" label-placement="floating" fill="solid" type="password" placeholder="Enter your confirm password"></ion-input>
         </ion-item><br>
-    <ion-button id="bs2" shape="round" (click)="signUp()">Sign Up</ion-button><br>
+    <ion-button id="bs2" shape="round" (click)="signUp()"><b>Sign Up</b></ion-button><br>
     <ion-card-content style="font-size:20px;">
     Already have an account? <b><a href="/sign-in">Sign In</a></b>
     </ion-card-content>

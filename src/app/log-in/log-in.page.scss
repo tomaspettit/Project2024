@@ -5,9 +5,13 @@ ion-content::part(background) {
 
   ion-title{
     text-align: center;
-    font-size: 35px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    font-size:35px;
   }
-
+  
   ion-button{
     height: 30px;
     width: 120px;

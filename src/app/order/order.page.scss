@@ -6,6 +6,15 @@ ion-title{
     color: rgb(42, 189, 42);
     font-size:28px;
   }
+
+  ion-textarea{
+    --background: #1aa3de;
+    --color: #fff;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+  }
   
   .b3{
     margin-top: 20px;
@@ -24,4 +33,11 @@ ion-title{
 
   ion-card{
     margin-top: 150px;
+  }
+
+  ion-button.styleButton3{
+    font-size:26px;
+    letter-spacing: 9.5px;
+    width:350px;
+    max-height: 30px;
   }

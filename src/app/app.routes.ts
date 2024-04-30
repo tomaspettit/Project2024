@@ -15,12 +15,8 @@ export const routes: Routes = [
     loadComponent: () => import('./menu/menu.page').then( m => m.MenuPage)
   },
   {
-    path: 'payment',
-    loadComponent: () => import('./payment/payment.page').then( m => m.PaymentPage)
-  },
-  {
-    path: 'sign-in',
-    loadComponent: () => import('./sign-in/sign-in.page').then( m => m.SignInPage)
+    path: 'log-in',
+    loadComponent: () => import('./log-in/log-in.page').then( m => m.LogInPage)
   },
   {
     path: 'sign-up',
@@ -29,5 +25,9 @@ export const routes: Routes = [
   {
     path: 'hthome',
     loadComponent: () => import('./hthome/hthome.page').then( m => m.HTHomePage)
+  },
+  {
+    path: 'order',
+    loadComponent: () => import('./order/order.page').then( m => m.OrderPage)
   },
 ];

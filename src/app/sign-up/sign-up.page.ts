@@ -7,7 +7,7 @@ import { AlertController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
-import{person} from 'ionicons/icons';
+import { person } from 'ionicons/icons';
 import { lockClosed } from 'ionicons/icons';
 
 @Component({
@@ -28,7 +28,7 @@ export class SignUpPage implements OnInit {
 
   async signUp() {
     if (this.myEmail == '' && this.myPassword == '') {
-      const alert = await this.alertController.create({
+        const alert = await this.alertController.create({
         header: 'Invalid Signing Up',
         message: 'Both email and password must be entered to this account.',
         buttons: ['Try Again'],
