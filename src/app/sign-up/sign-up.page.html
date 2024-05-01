@@ -1,5 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="warning">
+    <!--The ion-back-button is for going back to the hthome page-->
     <ion-buttons>
     <ion-back-button defaultHref="/hthome"></ion-back-button>
     <ion-title>Sign Up</ion-title>
@@ -17,6 +18,8 @@
   <ion-card-header>
     <ion-card-title id="ct"><b>Create new account</b></ion-card-title><br>
     <ion-item>
+      <!--The sign up page is for creating your own account. 3 input boxes, 1 input email, 1 password & 1 confirm password. Both password must be the same.
+          When you had it finished, you can sign up your account by clicking the sign up button and it could collect your data using Storage-->
       <ion-icon slot="start" style="margin-top:35px;" name="person" color="secondary"></ion-icon>
       <ion-input [clearInput]="true" [(ngModel)]="myEmail" label="Email" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" type="email" placeholder="Enter your email"></ion-input>
     </ion-item><br>
@@ -30,7 +33,7 @@
         </ion-item><br>
     <ion-button id="bs2" shape="round" (click)="signUp()"><b>Sign Up</b></ion-button><br>
     <ion-card-content style="font-size:20px;">
-    Already have an account? <b><a href="/sign-in">Sign In</a></b>
+    Already have an account? <b><a href="/log-in">Log In</a></b>
     </ion-card-content>
   </ion-card-header>
   </ion-card>

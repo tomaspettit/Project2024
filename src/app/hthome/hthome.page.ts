@@ -9,6 +9,7 @@ import { logIn } from 'ionicons/icons';
 import { personAdd } from 'ionicons/icons';
 import { home } from 'ionicons/icons';
 import { card } from 'ionicons/icons';
+import { menu } from 'ionicons/icons';
 
 @Component({
   selector: 'app-hthome',
@@ -20,7 +21,7 @@ import { card } from 'ionicons/icons';
 export class HTHomePage implements OnInit {
 
   constructor() { 
-    addIcons({book, logIn, personAdd, home, card});
+    addIcons({book, logIn, personAdd, home, card, menu});
   }
 
   ngOnInit() {

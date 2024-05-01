@@ -32,6 +32,7 @@ export class LogInPage implements OnInit {
   }
 
   async signIn() {
+    //Email isn't the same & password isn't to your own account
     if (this.e2 != this.myEmail && this.p2 != this.myPassword) {
       const alert = await this.alertController.create({
         header: 'Invalid Signing In',
@@ -39,13 +40,10 @@ export class LogInPage implements OnInit {
         buttons: ['Try Again'],
       });
       await alert.present();
-    } else {
-      await this.storage.create();
-      await this.storage.get("signed").then(()=>{
+    }
+    //Email & password are both the same to your account
+     else {
         this.router.navigate(['/menu']);
-      }).catch((error)=>{
-          console.log(error);
-        });
     }
   }
 

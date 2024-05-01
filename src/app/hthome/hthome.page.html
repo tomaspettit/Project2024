@@ -1,3 +1,7 @@
+<!--Using the menu button or slide it right, home button is for going back to the home page,
+    order button is for goiung to the order page, Sign Up button for Signing Up your account
+    and the Log In button for logging in your account-->
+
 <ion-menu side="end" contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -34,10 +38,17 @@
       <h2  class="label2">Mon - Thurs: 4pm to 12am</h2>
       <h2 class="label2">Fri - Sat: 4pm to 2am</h2>
       <h2 class="label2">Sun: 4pm to 12am</h2>
-      <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']">Browser Menu
+
+      <!--Menu button is for going to the menu page for what it's on the menu that you would like to get-->
+
+      <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
         <ion-icon slot="start" name="book"></ion-icon>
        </ion-button>
-       <hr color="dark" style="margin-top: 150px;">
+       <ion-menu-toggle>
+        <ion-button fill="outline" class="MenuStyle">
+          <ion-icon slot="start" name="menu"></ion-icon>Click to open Menu button</ion-button>
+      </ion-menu-toggle>
+       <hr color="dark" style="margin-top: 125px;">
        <p style="margin-top: 50px;" class="ps"><b>Phone No: 090 662 1765</b></p>
        <p class="as"><b>Main St., Creggs, F42EH10</b></p>
 </ion-content>

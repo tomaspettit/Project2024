@@ -8,19 +8,23 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <br><ion-label class="label2">Hello & Welcome to the<br>Multi-Takeaway</ion-label>
+  <br><ion-label class="label2" [hidden]="hidden">Hello & Welcome to the<br>Multi-Takeaway</ion-label>
   <br><ion-label class="label3">Please select your online takeaway</ion-label><br>
   <div class="wrapper">
-    <div class="ion-activatable ripple-parent circle2" id="t1" style="background-color: orange;" [routerLink]="['/hthome']">
-      Hot & Tasty Takeaway
+
+    <!-- The first button is for navigate to another page like home page to hthome page.
+         And as for the rest of the button, this is for opening Browser-->
+
+    <div class="ion-activatable ripple-parent circle2" id="t1" style="background-color: orange;" (click)="openHT()">
+      Hot<br>&<br>Tasty
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
     <div class="ion-activatable ripple-parent circle2"  style="background-color: blue;" (click)="openMartinos()">
-      MARTINO'S
+      <img src="https://res.cloudinary.com/dja3y20bi/image/upload/v1665291408/Foodinn/Logo/Martinos_2x_bwoqva.png" height="50" width="150">
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
     <div class="ion-activatable ripple-parent circle2"  style="background-color: rgb(36, 48, 36);" (click)="openNicos()">
-      NICO'S TAKEAWAY
+      <img src="http://nicostakeaway.com/assets/images/logo-light.png" height="50" width="110">
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
     <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openSupermacs()">
@@ -36,15 +40,17 @@
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
     <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openDominos()">
-      <img src="https://th.bing.com/th/id/OIP.yflqvaWi55O1Ru4gqkO3sgHaHZ?w=171&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="500" height="90">
+      <img src="https://th.bing.com/th/id/OIP.yflqvaWi55O1Ru4gqkO3sgHaHZ?w=171&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="200" height="90">
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
     <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openSubway()">
-      <img src="https://s.yimg.com/uu/api/res/1.2/0kBtW8uitxPrToRghBbPOw--~B/aD0yODgwO3c9MTQ0ODI7c209MTthcHBpZD15dGFjaHlvbg--/http://globalfinance.zenfs.com/en_us/Finance/US_AFTP_SILICONALLEY_H_LIVE/Subway_has_a_new_logo-c8ce92b6739b06da203bab9e33c9e28d" width="120" height="50">
+      <img src="https://s.yimg.com/uu/api/res/1.2/0kBtW8uitxPrToRghBbPOw--~B/aD0yODgwO3c9MTQ0ODI7c209MTthcHBpZD15dGFjaHlvbg--/http://globalfinance.zenfs.com/en_us/Finance/US_AFTP_SILICONALLEY_H_LIVE/Subway_has_a_new_logo-c8ce92b6739b06da203bab9e33c9e28d" 
+      width="100" height="50">
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
     <div class="ion-activatable ripple-parent circle"  style="background-color: white;" (click)="openBurgerKing()">
-      <img src="https://th.bing.com/th/id/R.38ddc9a8f4dca31bb8751d1a2c9b06ea?rik=7j7UJKnpNudqww&riu=http%3a%2f%2fimages5.fanpop.com%2fimage%2fphotos%2f31100000%2fBurger-King-burger-king-31124846-600-600.png&ehk=DBu%2byCXSMEZpzv8ZKWqNu6rCL5QgqMuQDhXJiuhR7PE%3d&risl=&pid=ImgRaw&r=0" width="90" height="90">
+      <img src="https://th.bing.com/th/id/R.38ddc9a8f4dca31bb8751d1a2c9b06ea?rik=7j7UJKnpNudqww&riu=http%3a%2f%2fimages5.fanpop.com%2fimage%2fphotos%2f31100000%2fBurger-King-burger-king-31124846-600-600.png&ehk=DBu%2byCXSMEZpzv8ZKWqNu6rCL5QgqMuQDhXJiuhR7PE%3d&risl=&pid=ImgRaw&r=0"
+       width="90" height="90">
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
 </div>

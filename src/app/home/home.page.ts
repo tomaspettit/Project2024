@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLinkWithHref } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { Browser } from '@capacitor/browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +14,19 @@ import { Browser } from '@capacitor/browser';
   imports: [RouterLinkWithHref, IonicModule, CommonModule, FormsModule],
 })
 export class HomePage {
-  constructor() {}
+  hidden:boolean=false;
+  constructor(private router: Router) {}
+
+  //There 8 Browsers to go to get any takeaway you want by finding the nearest place
+
+  async openHT(){
+    this.router.navigate(['/hthome']);
+    this.hidden=true;
+  }
 
   async openMartinos(){
     await Browser.open({url: 'https://www.martinos.ie/'});
+    this.hidden=true;
   };
 
   async openNicos(){

@@ -8,6 +8,7 @@ import { home } from 'ionicons/icons';
 import { logIn } from 'ionicons/icons';
 import { personAdd } from 'ionicons/icons';
 import { card } from 'ionicons/icons';
+import { menu } from 'ionicons/icons';
 
 //API Food Menu
 import { FoodMenuService } from '../Services/food-menu.service';
@@ -20,6 +21,7 @@ import { FoodMenuService } from '../Services/food-menu.service';
   imports: [RouterLinkWithHref, IonicModule, CommonModule, FormsModule]
 })
 export class MenuPage implements OnInit {
+  //Food Categories
   beverage:any=[];
   burger:any=[];
   chip:any=[];
@@ -33,7 +35,7 @@ export class MenuPage implements OnInit {
   wrap:any=[];
 
   constructor(private fm: FoodMenuService) { 
-    addIcons({home, personAdd, logIn, card});
+    addIcons({home, personAdd, logIn, card, menu});
   }
 
   ngOnInit(): void {

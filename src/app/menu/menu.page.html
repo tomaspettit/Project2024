@@ -1,3 +1,7 @@
+<!--Using the menu button or slide it right, home button is for going back to the home page,
+    order button is for goiung to the order page, Sign Up button for Signing Up your account
+    and the Log In button for logging in your account-->
+
 <ion-menu side="end" contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -30,8 +34,13 @@
       <ion-title [routerLink]="['/hthome']" class="titleStyle">Hot & Tasty</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-menu-toggle>
+    <ion-button class="MenuStyle" fill="outline">
+      <ion-icon slot="start" name="menu"></ion-icon>Click to open Menu button</ion-button>
+  </ion-menu-toggle>
 <ion-content class="ion-padding">
   <ion-accordion-group>
+    <!--All ion-accordion components should be grouped inside ion-accordion-group components for what number it is, the name of the food and how much that is.-->
     <ion-accordion value="first">
       <ion-item slot="header" color="light">
         <ion-label style="color: red;" class="l3">Chips</ion-label>
@@ -163,6 +172,8 @@
     </ion-accordion>
   <ion-accordion value="twelveth">
     <ion-item slot="header" color="light">
+      <!--Food allergies occur when the immune system overreacts to specific foods, treating them as invaders and triggering a protective response.
+          The name of the Food Allergies are: -->
       <ion-label class="l3" color="danger">FOOD ALLERGY - WARNING & SYMBOLS</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
@@ -170,13 +181,13 @@
         <ion-item>
           <ion-badge slot="start" color="success">CE</ion-badge>
           <ion-label>Celery</ion-label>
+          <ion-label>2, 4, 13, 14, 15, 17, 19, 20, 21, 23, 25, 26, 34, 35</ion-label>
         </ion-item>
-        <p>2, 4, 13, 14, 15, 17, 19, 20, 21, 23, 25, 26, 34, 35</p>
         <ion-item>
           <ion-badge slot="start" color="danger">GW</ion-badge>
           <ion-label>Gluten/Wheat</ion-label>
+          <ion-label>9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40</ion-label>
         </ion-item>
-        <p>9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 38, 39, 40</p>
         <ion-item>
           <ion-badge slot="start" color="medium">CR</ion-badge>
           <ion-label>Crustacean</ion-label>
@@ -184,13 +195,13 @@
         <ion-item>
           <ion-badge slot="start" color="warning">EG</ion-badge>
           <ion-label>Egg</ion-label>
+          <ion-label>3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 30, 34, 35</ion-label>
         </ion-item>
-        <p>3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 30, 34, 35</p>
         <ion-item>
           <ion-badge slot="start" color="tertiary">FI</ion-badge>
           <ion-label>Fish</ion-label>
+          <ion-label>31, 32, 33</ion-label>
         </ion-item>
-        <p>31, 32, 33</p>
         <ion-item>
           <ion-badge slot="start" color="primary">LU</ion-badge>
           <ion-label>Lupin</ion-label>
@@ -206,51 +217,51 @@
         <ion-item>
           <ion-badge slot="start" color="dark">MU</ion-badge>
           <ion-label>Mustard</ion-label>
+          <ion-label>2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 30, 37, 38, 39, 40</ion-label>
         </ion-item>
-        <p>2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 30, 37, 38, 39, 40</p>
         <ion-item>
           <ion-badge slot="start" style="background-color: #28bb50;">N</ion-badge>
           <ion-label>Nuts</ion-label>
+          <ion-label>19, 20, 21</ion-label>
         </ion-item>
-        <p>19, 20, 21</p>
         <ion-item>
           <ion-badge slot="start" color="dark">PE</ion-badge>
           <ion-label>Peanuts</ion-label>
+          <ion-label></ion-label>
         </ion-item>
         <ion-item>
           <ion-badge slot="start" color="success">SE</ion-badge>
           <ion-label>Sesame</ion-label>
+          <ion-label>9, 10, 11, 12, 13, 14, 15, 16, 17</ion-label>
         </ion-item>
-        <p>9, 10, 11, 12, 13, 14, 15, 16, 17</p>
         <ion-item>
           <ion-badge slot="start" color="secondary">SY</ion-badge>
           <ion-label>Soy</ion-label>
+          <ion-label>2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26</ion-label>
         </ion-item>
-        <p>2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26</p>
         <ion-item>
           <ion-badge slot="start" color="medium">SO</ion-badge>
           <ion-label>Sulphur Dioxide</ion-label>
+          <ion-label>18, 19, 20, 21, 22, 24, 25, 26, 27, 28</ion-label>
         </ion-item>
-        <p>18, 19, 20, 21, 22, 24, 25, 26, 27, 28</p>
         <ion-item>
           <ion-badge slot="start" color="light">S</ion-badge>
           <ion-label>Low Sugar</ion-label>
+          <ion-label>2, 3, 4, 5, 6, 7, 18</ion-label>
         </ion-item>
-        <p>2, 3, 4, 5, 6, 7, 18</p>
         <ion-item>
           <ion-badge slot="start" color="light">WF</ion-badge>
           <ion-label>Wheat Free</ion-label>
+          <ion-label>36</ion-label>
         </ion-item>
-        <p>36</p>
         <ion-item>
           <ion-badge slot="start" color="light">LF</ion-badge>
-          <ion-label></ion-label>
         </ion-item>
         <ion-item>
           <ion-badge slot="start" color="light">LSF</ion-badge>
           <ion-label>Low Saturate Fat</ion-label>
+          <ion-label>2</ion-label>
         </ion-item>
-        <p>2</p>
         <ion-item>
           <ion-badge slot="start" color="light">VE</ion-badge>
           <ion-label>Vegan</ion-label>
@@ -258,13 +269,13 @@
         <ion-item>
           <ion-badge slot="start" color="light">V</ion-badge>
           <ion-label>Vegetarian</ion-label>
+          <ion-label>2, 3, 4, 5</ion-label>
         </ion-item>
-        <p>2, 3, 4, 5</p>
         <ion-item>
           <ion-badge slot="start" color="light">DF</ion-badge>
           <ion-label>Dairy Free</ion-label>
+          <ion-label>2, 3, 36</ion-label>
         </ion-item>
-        <p>2, 3, 36</p>
         <ion-item>
           <ion-badge slot="start" color="light">NA</ion-badge>
           <ion-label>Low Sodium</ion-label>
@@ -272,8 +283,8 @@
         <ion-item>
           <ion-badge slot="start" color="light">LS</ion-badge>
           <ion-label>Low Salt</ion-label>
+          <ion-label>18, 19, 20, 21, 23, 26</ion-label>
         </ion-item>
-        <p>18, 19, 20, 21, 23, 26</p>
         <ion-item>
           <ion-badge slot="start" color="light">SY</ion-badge>
           <ion-label>Soya</ion-label>
@@ -285,8 +296,8 @@
         <ion-item>
           <ion-badge slot="start" color="light">M</ion-badge>
           <ion-label>Milk</ion-label>
+          <ion-label>18, 19, 20, 21, 24, 25, 26, 38</ion-label>
         </ion-item>
-        <p>18, 19, 20, 21, 24, 25, 26, 38</p>
         <ion-item>
           <ion-badge slot="start" color="light">EGF</ion-badge>
           <ion-label>Egg Free</ion-label>
@@ -294,6 +305,5 @@
       </ion-list>
     </div>
   </ion-accordion>
-</ion-accordion-group><hr><hr>
-  
+</ion-accordion-group>
 </ion-content>

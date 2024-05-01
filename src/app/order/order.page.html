@@ -1,3 +1,27 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-menu-toggle>
+        <ion-button class="b3" size="large" [routerLink]="['/home']">
+          <ion-icon slot="start" name="home"></ion-icon>
+            Home
+        </ion-button>
+        <ion-button class="b3" size="large">
+          <ion-icon slot="start" name="card"></ion-icon>
+            Order
+        </ion-button>
+      <ion-button class="b3" size="large" [routerLink]="['/sign-up']">
+        <ion-icon slot="start" name="person-add"></ion-icon>
+    Sign Up
+  </ion-button>
+  <ion-button class="b3" size="large" [routerLink]="['/log-in']">
+    <ion-icon slot="start" name="log-in"></ion-icon>
+    Log In
+  </ion-button>
+</ion-menu-toggle>
+</ion-toolbar>
+  </ion-header>
+</ion-menu>
 
 <div class="ion-page" id="main-content">
   <ion-content [fullscreen]="true">
@@ -20,5 +44,9 @@
     </ion-card-content>
     <ion-button class="styleButton3" shape="round" (click)="hasOrder()">Click</ion-button>
   </ion-card>
+  <ion-menu-toggle>
+    <ion-button class="MenuStyle" fill="outline">
+      <ion-icon slot="start" name="menu"></ion-icon>Click to open Menu button</ion-button>
+  </ion-menu-toggle>
   </ion-content>
 </div>

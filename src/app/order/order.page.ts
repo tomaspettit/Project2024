@@ -8,6 +8,7 @@ import { home } from 'ionicons/icons';
 import { logIn } from 'ionicons/icons';
 import { personAdd } from 'ionicons/icons';
 import { card } from 'ionicons/icons';
+import { menu } from 'ionicons/icons';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
@@ -21,7 +22,7 @@ import { Router } from '@angular/router';
 export class OrderPage implements OnInit {
  orderList: string = '';
   constructor(private alertController: AlertController, private router: Router) { 
-    addIcons({home, logIn, personAdd, card});
+    addIcons({home, logIn, personAdd, card, menu});
   }
 
   async hasOrder(){

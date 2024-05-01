@@ -27,6 +27,7 @@ export class SignUpPage implements OnInit {
   }
 
   async signUp() {
+    //Both email & passwords are not input just yet
     if (this.myEmail == '' && this.myPassword == '') {
         const alert = await this.alertController.create({
         header: 'Invalid Signing Up',
@@ -34,14 +35,18 @@ export class SignUpPage implements OnInit {
         buttons: ['Try Again'],
       });
       await alert.present();
-    } else if (this.myPassword != this.myPassword2) {
+    } 
+    //Both passwords are not equal
+    else if (this.myPassword != this.myPassword2) {
       const alert = await this.alertController.create({
         header: 'Invalid Signing Up',
         message: 'Both passwords must be the same',
         buttons: ['Try Again'],
       });
       await alert.present();
-    } else {
+    } 
+    //Both email & passwords has been input
+    else {
       await this.storage.create();
       await this.storage.set("email", this.myEmail)
       .then(()=>{

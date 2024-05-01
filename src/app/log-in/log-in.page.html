@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="warning">
+    <!--The ion-back-button is for going back to the hthome page-->
     <ion-buttons>
     <ion-back-button defaultHref="/hthome"></ion-back-button>
-    <ion-title>Sign In</ion-title>
+    <ion-title>Log In</ion-title>
   </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -10,13 +11,15 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar color="warning">
-      <ion-title>SignIn</ion-title>
+      <ion-title>Log In</ion-title>
     </ion-toolbar>
   </ion-header>
 <ion-card>
   <ion-card-header>
     <ion-card-title id="ct2"><b>Log in to your account</b></ion-card-title><br>
     <ion-item>
+      <!--The log in page is for logging your account. 2 input boxes, 1 input email, 1 password.
+          When you had it finished, you can log in your account by clicking the log in button.-->
       <ion-icon slot="start" name="person" color="secondary"></ion-icon>
       <ion-input [clearInput]="true" [(ngModel)]="e2" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" label="Email input" type="email" placeholder="Enter your email"></ion-input>
     </ion-item><br>
