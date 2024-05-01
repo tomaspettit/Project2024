@@ -8,7 +8,6 @@ import { home } from 'ionicons/icons';
 import { logIn } from 'ionicons/icons';
 import { personAdd } from 'ionicons/icons';
 import { card } from 'ionicons/icons';
-import { menu } from 'ionicons/icons';
 
 //API Food Menu
 import { FoodMenuService } from '../Services/food-menu.service';
@@ -34,8 +33,14 @@ export class MenuPage implements OnInit {
   sideOrder:any=[];
   wrap:any=[];
 
+  isModalOpen = false;
+
   constructor(private fm: FoodMenuService) { 
-    addIcons({home, personAdd, logIn, card, menu});
+    addIcons({home, personAdd, logIn, card});
+  }
+
+  setOpen(no:number, isOpen: boolean) {
+    this.isModalOpen = isOpen;
   }
 
   ngOnInit(): void {

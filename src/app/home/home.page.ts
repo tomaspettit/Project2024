@@ -14,19 +14,18 @@ import { Router } from '@angular/router';
   imports: [RouterLinkWithHref, IonicModule, CommonModule, FormsModule],
 })
 export class HomePage {
-  hidden:boolean=false;
   constructor(private router: Router) {}
 
-  //There 8 Browsers to go to get any takeaway you want by finding the nearest place
+  /* There 9 takeaways in total, 1 for navigateto another page & 8 for 
+   * open Browsers that allows you to go to get any takeaway you want by finding the nearest place
+   */
 
   async openHT(){
     this.router.navigate(['/hthome']);
-    this.hidden=true;
   }
 
   async openMartinos(){
     await Browser.open({url: 'https://www.martinos.ie/'});
-    this.hidden=true;
   };
 
   async openNicos(){

@@ -32,6 +32,9 @@
   <ion-header>
     <ion-toolbar color="warning">
       <ion-title size="large">Hot & Tasty</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <h1 class="label1">OPENING TIMES</h1>
@@ -44,10 +47,6 @@
       <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
         <ion-icon slot="start" name="book"></ion-icon>
        </ion-button>
-       <ion-menu-toggle>
-        <ion-button fill="outline" class="MenuStyle">
-          <ion-icon slot="start" name="menu"></ion-icon>Click to open Menu button</ion-button>
-      </ion-menu-toggle>
        <hr color="dark" style="margin-top: 125px;">
        <p style="margin-top: 50px;" class="ps"><b>Phone No: 090 662 1765</b></p>
        <p class="as"><b>Main St., Creggs, F42EH10</b></p>
