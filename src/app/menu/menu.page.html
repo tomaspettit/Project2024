@@ -1,31 +1,3 @@
-<!--Using the menu button or slide it right, home button is for going back to the home page,
-    order button is for goiung to the order page, Sign Up button for Signing Up your account
-    and the Log In button for logging in your account-->
-
-<ion-menu side="end" contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-menu-toggle>
-        <ion-button class="b2" size="large" [routerLink]="['/home']">
-          <ion-icon slot="start" name="home"></ion-icon>
-            Home
-        </ion-button>
-        <ion-button class="b2" size="large" [routerLink]="['/order']">
-          <ion-icon slot="start" name="card"></ion-icon>
-            Order
-        </ion-button>
-      <ion-button class="b2" size="large" [routerLink]="['/sign-up']">
-        <ion-icon slot="start" name="person-add"></ion-icon>
-    Sign Up
-  </ion-button>
-  <ion-button class="b2" size="large" [routerLink]="['/log-in']">
-    <ion-icon slot="start" name="log-in"></ion-icon>
-    Log In
-  </ion-button>
-</ion-menu-toggle>
-</ion-toolbar>
-  </ion-header>
-</ion-menu>
 
 <div class="ion-page" id="main-content">
   <ion-content [fullscreen]="true">

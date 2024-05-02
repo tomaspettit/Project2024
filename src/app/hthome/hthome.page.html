@@ -3,15 +3,11 @@
     and the Log In button for logging in your account-->
 
 
-
 <div class="ion-page" id="main-content">
 <ion-content [fullscreen]="true">
   <ion-header>
     <ion-toolbar color="warning">
       <ion-title size="large">Hot & Tasty</ion-title>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <h1 class="label1">OPENING TIMES</h1>
@@ -21,9 +17,22 @@
 
       <!--Menu button is for going to the menu page for what it's on the menu that you would like to get-->
 
-      <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
+      <ion-button color="primary" class="MenuStyle" [routerLink]="['/home']">Home
+        <ion-icon slot="start" name="home"></ion-icon>
+       </ion-button>
+       <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
         <ion-icon slot="start" name="book"></ion-icon>
        </ion-button>
+       <ion-button color="primary" class="MenuStyle" [routerLink]="['/sign-up']">Sign Up
+        <ion-icon slot="start" name="person-add"></ion-icon>
+       </ion-button>
+       <ion-button color="primary" class="MenuStyle" [routerLink]="['/log-in']">Log In
+        <ion-icon slot="start" name="log-in"></ion-icon>
+       </ion-button>
+       <ion-button color="primary" class="MenuStyle" [routerLink]="['/order']">Order Takeaway
+        <ion-icon slot="start" name="card"></ion-icon>
+       </ion-button>
+
        <hr color="dark" style="margin-top: 125px;">
        <p style="margin-top: 50px;" class="ps"><b>Phone No: 090 662 1765</b></p>
        <p class="as"><b>Main St., Creggs, F42EH10</b></p>
