@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -17,13 +17,8 @@ import { card } from 'ionicons/icons';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
 })
-export class HTHomePage implements OnInit {
-
+export class HTHomePage {
   constructor() { 
     addIcons({book, logIn, personAdd, home, card});
   }
-
-  ngOnInit() {
-  }
-
 }
