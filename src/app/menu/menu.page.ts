@@ -33,14 +33,8 @@ export class MenuPage implements OnInit {
   sideOrder:any=[];
   wrap:any=[];
 
-  isModalOpen = false;
-
   constructor(private fm: FoodMenuService) { 
     addIcons({home, personAdd, logIn, card});
-  }
-
-  setOpen(no:number, isOpen: boolean) {
-    this.isModalOpen = isOpen;
   }
 
   ngOnInit(): void {
@@ -60,7 +54,5 @@ export class MenuPage implements OnInit {
       }
     );
   }
-
-  
 
 }

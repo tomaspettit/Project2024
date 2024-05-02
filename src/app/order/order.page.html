@@ -3,34 +3,240 @@
   <ion-content [fullscreen]="true">
   <ion-header>
     <ion-toolbar color="warning">
-      <ion-title [routerLink]="['/hthome']" class="titleStyle">Hot & Tasty</ion-title>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
+      <ion-title (click)="backHTHome()" class="titleStyle">Hot & Tasty</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-card>
     <ion-card-header>
       <ion-card-title><b>Ordering Takeaway</b></ion-card-title>
-      <ion-card-subtitle style="color:black">Please, enter your email, phone no. & food and drinks for<br>your order.
-        For example, type 1 * Curry chips, that is one curry chips, if you type 2 * Batter Sausages you have 2 Batter Sausages.
-        Or you can you can type No. 1 * 2 for two chips or type No. 44 * 2 for two chicken burger meals. 
-        When you had it done, click enter and add another order for your takeaway.</ion-card-subtitle>
+      <ion-card-subtitle style="color:black">Please, enter your email, phone no. & select your food and drinks for your order.
+        For example, select Curry Chips for selection of food & select 2 qualities for 2 Curry Chips. Each Curry Chips is worth €4.00, they ordered 2 Curry Chips and the total is €8.00 
+        When you had it done, ignore the rest of the selction and click enter and add another order for your takeaway.</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-      <ion-icon slot="start" name="person"></ion-icon>
+      <ion-icon slot="start" name="person" color="secondary"></ion-icon>
       <ion-input [clearInput]="true" [(ngModel)]="email" label="Enter your email" label-placement="floating" fill="outline" type="email" placeholder="email@domain.com"></ion-input>
       </ion-item><br>
       <ion-item>
-      <ion-icon slot="start" name="call"></ion-icon>
+      <ion-icon slot="start" name="call" color="secondary"></ion-icon>
       <ion-input [clearInput]="true" [(ngModel)]="phoneNo" label="Enter your telephone no." label-placement="floating" fill="outline" type="tel" placeholder="888-888-8888"></ion-input>
     </ion-item><br>
-    <ion-item>
-      <ion-textarea [(ngModel)]="orderList" [counter]="true" [maxlength]="150" [autoGrow]="true" 
-      [clearOnEdit]="true" label="What would you like to get?" labelPlacement="floating" 
-      fill="outline"></ion-textarea>
-    </ion-item><br>
+
+    <!--Selection of Food Menu-->
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customChips" interface="alert" placeholder="Chips" [multiple]="true">
+          <ion-select-option *ngFor="let c of chip">{{c.Number}}: {{c.Food}} €{{c.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+
+          <!-- Price * Quality => 3.50 * 3 = €10.50-->
+
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customBurger" interface="alert" placeholder="Burger" [multiple]="true">
+          <ion-select-option *ngFor="let b of burger">{{b.Number}}: {{b.Food}} €{{b.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customKebab" interface="alert" placeholder="Kebab" [multiple]="true">
+          <ion-select-option *ngFor="let k of kebab">{{k.Number}}: {{k.Food}} €{{k.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customWraps" interface="alert" placeholder="Wraps" [multiple]="true">
+          <ion-select-option *ngFor="let w of wrap">{{w.Number}}: {{w.Food}} €{{w.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customSideOrder" interface="alert" placeholder="Side Order" [multiple]="true">
+          <ion-select-option *ngFor="let sd of sideOrder">{{sd.Number}}: {{sd.Food}} €{{sd.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customFish" interface="alert" placeholder="Fish" [multiple]="true">
+          <ion-select-option *ngFor="let f of fish">{{f.Number}}: {{f.Food}} €{{f.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customFriedChicken" interface="alert" placeholder="Fried Chicken" [multiple]="true">
+          <ion-select-option *ngFor="let fc of friedChicken">{{fc.Number}}: {{fc.Food}} €{{fc.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customKidsMeal" interface="alert" placeholder="Kids Meal" [multiple]="true">
+          <ion-select-option *ngFor="let km of kMeal">{{km.Food}} €{{km.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customMealDeals" interface="alert" placeholder="Meal Deals" [multiple]="true">
+          <ion-select-option *ngFor="let md of mDeal">{{md.Number}}: {{md.Food}} €{{md.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customBeverages" interface="alert" placeholder="Beverages" [multiple]="true">
+          <ion-select-option *ngFor="let bev of beverage">{{bev.Drink}} €{{bev.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-select [interfaceOptions]="customSauce" interface="alert" placeholder="Sauces" [multiple]="true">
+          <ion-select-option *ngFor="let s of sauce">{{s.Sauce}} €{{s.Price}}</ion-select-option>
+        </ion-select>
+        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-label></ion-label>
     </ion-card-content>
     <ion-button class="styleButton3" shape="round" (click)="hasOrder()">Click</ion-button>
   </ion-card>

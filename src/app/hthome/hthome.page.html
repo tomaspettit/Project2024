@@ -1,8 +1,3 @@
-<!--Using the menu button or slide it right, home button is for going back to the home page,
-    order button is for goiung to the order page, Sign Up button for Signing Up your account
-    and the Log In button for logging in your account-->
-
-
 <div class="ion-page" id="main-content">
 <ion-content [fullscreen]="true">
   <ion-header>
@@ -15,21 +10,19 @@
       <h2 class="label2">Fri - Sat: 4pm to 2am</h2>
       <h2 class="label2">Sun: 4pm to 12am</h2>
 
-      <!--Menu button is for going to the menu page for what it's on the menu that you would like to get-->
-
       <ion-button color="primary" class="MenuStyle" [routerLink]="['/home']">Home
         <ion-icon slot="start" name="home"></ion-icon>
        </ion-button>
-       <ion-button color="primary" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
+       <ion-button color="danger" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
         <ion-icon slot="start" name="book"></ion-icon>
        </ion-button>
-       <ion-button color="primary" class="MenuStyle" [routerLink]="['/sign-up']">Sign Up
+       <ion-button color="tertiary" class="MenuStyle" [routerLink]="['/sign-up']">Sign Up
         <ion-icon slot="start" name="person-add"></ion-icon>
        </ion-button>
-       <ion-button color="primary" class="MenuStyle" [routerLink]="['/log-in']">Log In
+       <ion-button color="tertiary" class="MenuStyle" [routerLink]="['/log-in']">Log In
         <ion-icon slot="start" name="log-in"></ion-icon>
        </ion-button>
-       <ion-button color="primary" class="MenuStyle" [routerLink]="['/order']">Order Takeaway
+       <ion-button color="medium" class="MenuStyle" [routerLink]="['/order']">Order Takeaway
         <ion-icon slot="start" name="card"></ion-icon>
        </ion-button>
 

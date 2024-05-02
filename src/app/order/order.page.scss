@@ -7,6 +7,13 @@ ion-title{
     font-size:28px;
   }
 
+  ion-card-title{
+    font-size: 35px;
+  }
+  ion-card-subtitle{
+    font-size: 22px;
+  }
+
   ion-textarea{
     --background: #1aa3de;
     --color: #fff;
@@ -41,7 +48,7 @@ ion-title{
   }
 
   ion-card{
-    margin-top: 150px;
+    margin-top: 30px;
   }
 
   ion-button.styleButton3{
