@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -17,7 +17,7 @@ import { lockClosed } from 'ionicons/icons';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
 })
-export class LogInPage implements OnInit {
+export class LogInPage{
   myEmail:string="";
   myPassword:string="";
   e2:string="";
@@ -40,14 +40,15 @@ export class LogInPage implements OnInit {
         buttons: ['Try Again'],
       });
       await alert.present();
+      this.e2='';
+      this.p2='';
     }
     //Email & password are both the same to your account
      else {
         this.router.navigate(['/menu']);
+        this.e2='';
+        this.p2='';
     }
-  }
-
-  ngOnInit() {
   }
 
 }

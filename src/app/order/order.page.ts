@@ -48,7 +48,7 @@ export class OrderPage implements OnInit {
   }
 
   async backHTHome(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['/hthome']);
     this.email='';
     this.phoneNo='';
   }
@@ -73,14 +73,14 @@ export class OrderPage implements OnInit {
       await alert.present();
       this.email=''
       this.phoneNo='';
-      this.router.navigate(['/hthome']);
+      this.router.navigate(['/home']);
     }
   }
 
-  customQuality = {
-    header: 'Quality',
+  customQuantity = {
+    header: 'Quantity',
     subHeader: 'How many would you get from the takeaway',
-    message: 'Select only one of those qualitites',
+    message: 'Select only one of those quantities',
     translucent: true,
   };
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -17,7 +17,7 @@ import { lockClosed } from 'ionicons/icons';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
 })
-export class SignUpPage implements OnInit {
+export class SignUpPage{
   myEmail: string = '';
   myPassword: string = '';
   myPassword2: string = '';
@@ -35,6 +35,8 @@ export class SignUpPage implements OnInit {
         buttons: ['Try Again'],
       });
       await alert.present();
+      this.myEmail='';
+      this.myPassword='';
     } 
     //Both passwords are not equal
     else if (this.myPassword != this.myPassword2) {
@@ -44,6 +46,9 @@ export class SignUpPage implements OnInit {
         buttons: ['Try Again'],
       });
       await alert.present();
+      this.myEmail='';
+      this.myPassword='';
+      this.myPassword2='';
     } 
     //Both email & passwords has been input
     else {
@@ -51,19 +56,19 @@ export class SignUpPage implements OnInit {
       await this.storage.set("email", this.myEmail)
       .then(()=>{
         this.router.navigate(['/menu']);
+        this.myEmail='';
       }).catch((error)=>{
         console.log(error);
       });
       await this.storage.set("password", this.myPassword)
       .then(()=>{
         this.router.navigate(['/menu']);
+        this.myPassword='';
+        this.myPassword2='';
       }).catch((error)=>{
         console.log(error);
       });
     }
-  }
-
-  ngOnInit() {
   }
 
 }

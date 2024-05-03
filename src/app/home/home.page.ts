@@ -5,6 +5,8 @@ import { RouterLinkWithHref } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { Browser } from '@capacitor/browser';
 import { Router } from '@angular/router';
+import { addIcons } from 'ionicons';
+import { restaurant } from 'ionicons/icons';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +16,9 @@ import { Router } from '@angular/router';
   imports: [RouterLinkWithHref, IonicModule, CommonModule, FormsModule],
 })
 export class HomePage {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    addIcons({restaurant});
+  }
 
   /* There 9 takeaways in total, 1 for navigateto another page & 8 for 
    * open Browsers that allows you to go to get any takeaway you want by finding the nearest place

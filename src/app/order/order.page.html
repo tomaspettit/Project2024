@@ -29,7 +29,7 @@
         <ion-select [interfaceOptions]="customChips" interface="alert" placeholder="Chips" [multiple]="true">
           <ion-select-option *ngFor="let c of chip">{{c.Number}}: {{c.Food}} €{{c.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -41,7 +41,7 @@
           <ion-select-option>9</ion-select-option>
           <ion-select-option>10</ion-select-option>
 
-          <!-- Price * Quality => 3.50 * 3 = €10.50-->
+          <!-- Price * Quantity => 3.50 * 3 = €10.50-->
 
         </ion-select>
       </ion-item>
@@ -51,7 +51,7 @@
         <ion-select [interfaceOptions]="customBurger" interface="alert" placeholder="Burger" [multiple]="true">
           <ion-select-option *ngFor="let b of burger">{{b.Number}}: {{b.Food}} €{{b.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -70,7 +70,7 @@
         <ion-select [interfaceOptions]="customKebab" interface="alert" placeholder="Kebab" [multiple]="true">
           <ion-select-option *ngFor="let k of kebab">{{k.Number}}: {{k.Food}} €{{k.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -89,7 +89,7 @@
         <ion-select [interfaceOptions]="customWraps" interface="alert" placeholder="Wraps" [multiple]="true">
           <ion-select-option *ngFor="let w of wrap">{{w.Number}}: {{w.Food}} €{{w.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -108,7 +108,7 @@
         <ion-select [interfaceOptions]="customSideOrder" interface="alert" placeholder="Side Order" [multiple]="true">
           <ion-select-option *ngFor="let sd of sideOrder">{{sd.Number}}: {{sd.Food}} €{{sd.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -127,7 +127,7 @@
         <ion-select [interfaceOptions]="customFish" interface="alert" placeholder="Fish" [multiple]="true">
           <ion-select-option *ngFor="let f of fish">{{f.Number}}: {{f.Food}} €{{f.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -146,7 +146,7 @@
         <ion-select [interfaceOptions]="customFriedChicken" interface="alert" placeholder="Fried Chicken" [multiple]="true">
           <ion-select-option *ngFor="let fc of friedChicken">{{fc.Number}}: {{fc.Food}} €{{fc.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -165,7 +165,7 @@
         <ion-select [interfaceOptions]="customKidsMeal" interface="alert" placeholder="Kids Meal" [multiple]="true">
           <ion-select-option *ngFor="let km of kMeal">{{km.Food}} €{{km.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -184,7 +184,7 @@
         <ion-select [interfaceOptions]="customMealDeals" interface="alert" placeholder="Meal Deals" [multiple]="true">
           <ion-select-option *ngFor="let md of mDeal">{{md.Number}}: {{md.Food}} €{{md.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -203,7 +203,7 @@
         <ion-select [interfaceOptions]="customBeverages" interface="alert" placeholder="Beverages" [multiple]="true">
           <ion-select-option *ngFor="let bev of beverage">{{bev.Drink}} €{{bev.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>
@@ -222,7 +222,7 @@
         <ion-select [interfaceOptions]="customSauce" interface="alert" placeholder="Sauces" [multiple]="true">
           <ion-select-option *ngFor="let s of sauce">{{s.Sauce}} €{{s.Price}}</ion-select-option>
         </ion-select>
-        <ion-select [interfaceOptions]="customQuality" interface="alert" justify="end" placeholder="Quality">
+        <ion-select [interfaceOptions]="customQuantity" interface="alert" justify="end" placeholder="Quantity">
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           <ion-select-option>3</ion-select-option>

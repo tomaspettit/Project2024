@@ -9,25 +9,31 @@
       <h2  class="label2">Mon - Thurs: 4pm to 12am</h2>
       <h2 class="label2">Fri - Sat: 4pm to 2am</h2>
       <h2 class="label2">Sun: 4pm to 12am</h2>
-
-      <ion-button color="primary" class="MenuStyle" [routerLink]="['/home']">Home
+      
+      <ion-button id="toast" color="primary" class="MenuStyle" [routerLink]="['/home']">Home
         <ion-icon slot="start" name="home"></ion-icon>
        </ion-button>
-       <ion-button color="danger" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
+       <ion-toast trigger="toast" icon="home" message="You return to the Home page" [duration]="5000"></ion-toast>
+       <ion-button id="toast2" color="danger" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
         <ion-icon slot="start" name="book"></ion-icon>
        </ion-button>
-       <ion-button color="tertiary" class="MenuStyle" [routerLink]="['/sign-up']">Sign Up
+       <ion-toast trigger="toast2" icon="book" [buttons]="toastButtons" 
+       message="Ready to see what's in the menu?" [duration]="5000"></ion-toast>
+       <ion-button id="toast3" color="tertiary" class="MenuStyle" [routerLink]="['/sign-up']">Sign Up
         <ion-icon slot="start" name="person-add"></ion-icon>
        </ion-button>
-       <ion-button color="tertiary" class="MenuStyle" [routerLink]="['/log-in']">Log In
+       <ion-toast trigger="toast3" icon="person" message="Prepare to create your own account" [duration]="5000"></ion-toast>
+       <ion-button id="toast4" color="tertiary" class="MenuStyle" [routerLink]="['/log-in']">Log In
         <ion-icon slot="start" name="log-in"></ion-icon>
        </ion-button>
-       <ion-button color="medium" class="MenuStyle" [routerLink]="['/order']">Order Takeaway
+       <ion-toast trigger="toast4" icon="log-in" message="Log in the same account that you have" [duration]="5000"></ion-toast>
+       <ion-button id="toast5" color="medium" class="MenuStyle" [routerLink]="['/order']">Order Takeaway
         <ion-icon slot="start" name="card"></ion-icon>
        </ion-button>
-
-       <hr color="dark" style="margin-top: 125px;">
-       <p style="margin-top: 50px;" class="ps"><b>Phone No: 090 662 1765</b></p>
+       <ion-toast trigger="toast5" icon="card" [buttons]="toastButtons2"
+       message="Ready to select your food & drinks?" [duration]="5000"></ion-toast>
+       <hr color="dark" style="margin-top: 30px;">
+       <p style="margin-top: 25px;" class="ps"><b>Phone No: 090 662 1765</b></p>
        <p class="as"><b>Main St., Creggs, F42EH10</b></p>
 </ion-content>
 </div>

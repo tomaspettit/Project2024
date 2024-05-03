@@ -14,10 +14,11 @@
     <!-- The first button is for navigate to another page like home page to hthome page.
          And as for the rest of the button, this is for opening Browser-->
 
-    <div class="ion-activatable ripple-parent circle2" id="t1" style="background-color: orange;" (click)="openHT()">
+    <div class="ion-activatable ripple-parent circle2" id="toastHome" style="background-color: orange; color: rgb(42, 189, 42)" (click)="openHT()">
       Hot<br>&<br>Tasty
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
     </div>
+    <ion-toast trigger="toastHome" icon="restaurant" message="Welcome to Hot & Tasty Takeaway" [duration]="5000"></ion-toast>
     <div class="ion-activatable ripple-parent circle2"  style="background-color: blue;" (click)="openMartinos()">
       <img src="https://res.cloudinary.com/dja3y20bi/image/upload/v1665291408/Foodinn/Logo/Martinos_2x_bwoqva.png" height="30" width="120">
       <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
