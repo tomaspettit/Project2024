@@ -25,7 +25,8 @@
     </ion-item><br>
     <ion-item>
       <ion-icon slot="start" name="lock-closed" color="secondary"></ion-icon>
-          <ion-input [clearInput]="true" [(ngModel)]="p2" label="Enter your password" label-placement="floating" fill="solid" type="password"></ion-input>
+          <ion-input [clearInput]="true" [(ngModel)]="p2" label="Enter your password" 
+          label-placement="floating" fill="solid" type="password" [counter]="true" maxLength="20"></ion-input>
         </ion-item><br>
         <ion-item>
           <ion-label id="l1" slot="end">Remember Me</ion-label>

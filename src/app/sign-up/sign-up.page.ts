@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import{ToastController} from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { person } from 'ionicons/icons';
-import { lockClosed } from 'ionicons/icons';
+import { person, lockClosed, alertCircle, checkmarkCircle } from 'ionicons/icons';
 
 @Component({
   selector: 'app-sign-up',
@@ -22,49 +21,48 @@ export class SignUpPage{
   myPassword: string = '';
   myPassword2: string = '';
 
-  constructor(private alertController: AlertController, private storage:Storage, private router:Router) {
-    addIcons({person, lockClosed});
+  constructor(private toastController: ToastController, private storage:Storage, private router:Router) {
+    addIcons({person, lockClosed, alertCircle, checkmarkCircle});
   }
 
   async signUp() {
     //Both email & passwords are not input just yet
     if (this.myEmail == '' && this.myPassword == '') {
-        const alert = await this.alertController.create({
-        header: 'Invalid Signing Up',
-        message: 'Both email and password must be entered to this account.',
-        buttons: ['Try Again'],
+        const toast = await this.toastController.create({
+        message: 'Invalid Signing Up. Both email and password must be entered to this account.',
+        duration: 5000,
+        icon: alertCircle,
       });
-      await alert.present();
-      this.myEmail='';
-      this.myPassword='';
+      await toast.present();
     } 
     //Both passwords are not equal
-    else if (this.myPassword != this.myPassword2) {
-      const alert = await this.alertController.create({
-        header: 'Invalid Signing Up',
-        message: 'Both passwords must be the same',
-        buttons: ['Try Again'],
+    else if (this.myPassword != this.myPassword2 && this.myPassword.length != this.myPassword2.length) {
+      const toast = await this.toastController.create({
+        message: 'Invalid Signing Up. Both passwords must be the same',
+        duration: 3000,
+        icon: alertCircle,
+
       });
-      await alert.present();
-      this.myEmail='';
-      this.myPassword='';
-      this.myPassword2='';
+      await toast.present();
     } 
     //Both email & passwords has been input
     else {
+      const toast = await this.toastController.create({
+        message: 'Sign Up Success',
+        duration: 3000,
+        icon: checkmarkCircle,
+        });
+        await toast.present();
       await this.storage.create();
       await this.storage.set("email", this.myEmail)
       .then(()=>{
         this.router.navigate(['/menu']);
-        this.myEmail='';
       }).catch((error)=>{
         console.log(error);
       });
       await this.storage.set("password", this.myPassword)
       .then(()=>{
         this.router.navigate(['/menu']);
-        this.myPassword='';
-        this.myPassword2='';
       }).catch((error)=>{
         console.log(error);
       });

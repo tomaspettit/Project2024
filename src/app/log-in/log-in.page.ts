@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import{ToastController} from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
-import { addIcons } from 'ionicons';
-import{person} from 'ionicons/icons';
-import { lockClosed } from 'ionicons/icons';
+import { addIcons} from 'ionicons';
+import { person, lockClosed, alertCircle, checkmarkCircle } from 'ionicons/icons';
 
 @Component({
   selector: 'app-log-in',
@@ -22,7 +21,7 @@ export class LogInPage{
   myPassword:string="";
   e2:string="";
   p2:string="";
-  constructor(private storage: Storage, private alertController: AlertController, private router: Router) { 
+  constructor(private storage: Storage, private toastController: ToastController, private router: Router) { 
     addIcons({person, lockClosed});
   }
 
@@ -34,20 +33,30 @@ export class LogInPage{
   async signIn() {
     //Email isn't the same & password isn't to your own account
     if (this.e2 != this.myEmail && this.p2 != this.myPassword) {
-      const alert = await this.alertController.create({
-        header: 'Invalid Signing In',
-        message: 'Both email and password must be entered to this account. Or create your account',
-        buttons: ['Try Again'],
+      const toast = await this.toastController.create({
+        message: 'Invalid Signing In. Both email and password must be entered to this account. Or create your account',
+        duration: 3000,
+        icon: alertCircle,
       });
-      await alert.present();
-      this.e2='';
-      this.p2='';
+      await toast.present();
+    }
+    else if(this.e2 == '' && this.p2 == ''){
+      const toast = await this.toastController.create({
+      message: 'Invalid Signing In. Both email and password must input to your account',
+      duration: 3000,
+      icon: alertCircle,
+      });
+      await toast.present();
     }
     //Email & password are both the same to your account
      else {
+      const toast = await this.toastController.create({
+        message: 'Log In Success',
+        duration: 3000,
+        icon: checkmarkCircle,
+        });
+        await toast.present();
         this.router.navigate(['/menu']);
-        this.e2='';
-        this.p2='';
     }
   }
 

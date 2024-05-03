@@ -236,7 +236,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    <ion-label></ion-label>
+    <ion-textarea labelPlacement="floating" label="Is there anything that you want with something?" placeholder="Eg. with onions or no onions on the burger"
+    [autoGrow]="true" [clearOnEdit]="true" [counter]="true" maxlength="100"></ion-textarea>
     </ion-card-content>
     <ion-button class="styleButton3" shape="round" (click)="hasOrder()">Click</ion-button>
   </ion-card>

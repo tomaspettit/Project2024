@@ -21,15 +21,21 @@
       <!--The sign up page is for creating your own account. 3 input boxes, 1 input email, 1 password & 1 confirm password. Both password must be the same.
           When you had it finished, you can sign up your account by clicking the sign up button and it could collect your data using Storage-->
       <ion-icon slot="start" style="margin-top:35px;" name="person" color="secondary"></ion-icon>
-      <ion-input [clearInput]="true" [(ngModel)]="myEmail" label="Email" errorText="Invalid email" ngModel email label-placement="floating" fill="solid" type="email" placeholder="Enter your email"></ion-input>
+      <ion-input [clearInput]="true" [(ngModel)]="myEmail" 
+      label="Email" errorText="Invalid email" ngModel email label-placement="floating" 
+      fill="solid" type="email" placeholder="Enter your email"></ion-input>
     </ion-item><br>
     <ion-item>
       <ion-icon slot="start" style="margin-top:35px" name="lock-closed" color="secondary"></ion-icon>
-          <ion-input [clearInput]="true" [(ngModel)]="myPassword" label="Password" label-placement="floating" fill="solid" type="password" placeholder="Enter your password"></ion-input>
+          <ion-input [clearInput]="true" [(ngModel)]="myPassword" 
+          label="Password" label-placement="floating" fill="solid" type="password" 
+          placeholder="Enter your password" [counter]="true" maxLength="20"></ion-input>
         </ion-item><br>
         <ion-item>
           <ion-icon slot="start" style="margin-top:35px" name="lock-closed" color="secondary"></ion-icon>
-          <ion-input [clearInput]="true" [(ngModel)]="myPassword2" label="Password Confirm" label-placement="floating" fill="solid" type="password" placeholder="Enter your confirm password"></ion-input>
+          <ion-input [clearInput]="true" [(ngModel)]="myPassword2" label="Password Confirm" 
+          label-placement="floating" fill="solid" type="password" 
+          placeholder="Enter your confirm password" [counter]="true" maxLength="20"></ion-input>
         </ion-item><br>
     <ion-button id="bs2" shape="round" (click)="signUp()"><b>Sign Up</b></ion-button><br>
     <ion-card-content style="font-size:20px;">

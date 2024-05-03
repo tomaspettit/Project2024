@@ -1,16 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { home } from 'ionicons/icons';
-import { logIn } from 'ionicons/icons';
-import { card } from 'ionicons/icons';
-import {person} from 'ionicons/icons';
-import { call } from 'ionicons/icons';
-import { personAdd } from 'ionicons/icons';
-import { AlertController } from '@ionic/angular';
+import {person, call, alertCircle, checkmarkCircle} from 'ionicons/icons';
+import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 //API Food Menu
@@ -23,7 +18,7 @@ import { FoodMenuService } from '../Services/food-menu.service';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, RouterLinkWithHref]
 })
-export class OrderPage implements OnInit {
+export class OrderPage{
  email: string='';
  phoneNo: string = '';
  totalPrice: number= 0;
@@ -43,8 +38,8 @@ export class OrderPage implements OnInit {
  wrap:any=[];
 
 
-  constructor(private alertController: AlertController, private router: Router, private fm: FoodMenuService) { 
-    addIcons({home, logIn, card, person, personAdd, call});
+  constructor(private toastController: ToastController, private router: Router, private fm: FoodMenuService) { 
+    addIcons({person, call, alertCircle, checkmarkCircle});
   }
 
   async backHTHome(){
@@ -56,23 +51,21 @@ export class OrderPage implements OnInit {
   async hasOrder(){
     //Hasn't input them all yet
     if(this.email == '' && this.phoneNo == ''){
-        const alert = await this.alertController.create({
-        header: 'Invalid Ordered',
-        message: 'You must input your email & your phone No.',
-        buttons: ['Try Again!'],
+        const toast = await this.toastController.create({
+        message: 'Invalid OrderedYou must input your email & your phone No.',
+        duration: 3000,
+        icon: alertCircle,
       });
-      await alert.present();
+      await toast.present();
     }
     //All has been input
     else{
-        const alert = await this.alertController.create({
-        header: 'Ordering Food Success',
-        message: 'Thank you for ordering at the Hot & Tasty Takeaway',
-        buttons: ['OK'],
+        const toast = await this.toastController.create({
+        message: 'Ordering Food Success. Thank you for ordering at the Hot & Tasty Takeaway',
+        duration: 3000,
+        icon: checkmarkCircle,
       });
-      await alert.present();
-      this.email=''
-      this.phoneNo='';
+      await toast.present();
       this.router.navigate(['/home']);
     }
   }
