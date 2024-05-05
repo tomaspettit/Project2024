@@ -44,10 +44,56 @@ export class MenuPage implements OnInit {
       message: 'You return to Hot & Tasty Home page',
       duration: 3000,
       icon: home,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
     });
     await toast.present();
-    this.router.navigate(['/hthome']);
   }
+
+  async navigateOrder(){
+    const toast = await this.toastController.create({
+      message: 'You select order page. Prepared to order your selection of your food & drinks',
+      duration: 3000,
+      icon: card,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
+    });
+    await toast.present();
+  }
+
+  public toastButtons = [
+    {
+      text: 'Yes',
+      role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/order']);
+        this.navigateOrder();
+      },
+    },
+    {
+      text: 'No',
+      role: 'cancel',
+      
+    },
+  ];
+
+  public toastButtons2 = [
+    {
+      text: 'Yes',
+      role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/hthome']);
+        this.backButton();
+      },
+    },
+    {
+      text: 'No',
+      role: 'cancel',
+      
+    },
+  ];
 
   ngOnInit(): void {
     this.fm.GetFoodData().subscribe(

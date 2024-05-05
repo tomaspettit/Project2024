@@ -30,6 +30,9 @@ export class LogInPage{
       message: 'You return to Hot & Tasty Home page',
       duration: 3000,
       icon: home,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
     });
     await toast.present();
   }
@@ -46,6 +49,9 @@ export class LogInPage{
         message: 'Invalid Signing In. Both email and password must be entered to this account. Or create your account',
         duration: 3000,
         icon: alertCircle,
+        swipeGesture:"vertical",
+        position:"bottom",
+        positionAnchor:"footer",
       });
       await toast.present();
     }
@@ -54,6 +60,9 @@ export class LogInPage{
       message: 'Invalid Signing In. Both email and password must input to your account',
       duration: 3000,
       icon: alertCircle,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
       });
       await toast.present();
     }
@@ -63,10 +72,29 @@ export class LogInPage{
         message: 'Log In Success',
         duration: 3000,
         icon: checkmarkCircle,
+        swipeGesture:"vertical",
+        position:"bottom",
+        positionAnchor:"footer",
         });
         await toast.present();
         this.router.navigate(['/menu']);
     }
   }
+
+  public toastButtons = [
+    {
+      text: 'Yes',
+      role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/hthome']);
+        this.backButton();
+      },
+    },
+    {
+      text: 'No',
+      role: 'cancel',
+      
+    },
+  ];
 
 }

@@ -47,9 +47,11 @@ export class OrderPage{
       message: 'You return to Hot & Tasty Home page',
       duration: 3000,
       icon: home,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
     });
     await toast.present();
-    this.router.navigate(['/hthome']);
     this.email='';
     this.phoneNo='';
   }
@@ -61,6 +63,9 @@ export class OrderPage{
         message: 'Invalid Ordered! You must input your email & your phone No.',
         duration: 3000,
         icon: alertCircle,
+        swipeGesture:"vertical",
+        position:"bottom",
+        positionAnchor:"footer",
       });
       await toast.present();
     }
@@ -70,6 +75,9 @@ export class OrderPage{
         message: 'Ordering Food Success. Thank you for ordering at the Hot & Tasty Takeaway',
         duration: 3000,
         icon: checkmarkCircle,
+        swipeGesture:"vertical",
+        position:"bottom",
+        positionAnchor:"footer",
       });
       await toast.present();
       this.router.navigate(['/home']);
@@ -177,6 +185,21 @@ export class OrderPage{
       }
     );
   }
+
+  public toastButtons = [
+    {
+      text: 'Yes',
+      role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/hthome']);
+        this.backButton();
+      },
+    },
+    {
+      text: 'No',
+      role: 'cancel',
+    },
+  ];
 
 }
 

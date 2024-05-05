@@ -3,7 +3,8 @@
   <ion-content [fullscreen]="true">
   <ion-header>
     <ion-toolbar color="warning">
-      <ion-title (click)="backButton()" class="titleStyle">Hot & Tasty</ion-title>
+      <ion-title id="toast2" class="titleStyle">Hot & Tasty</ion-title>
+      <ion-toast trigger="toast2" icon="home" [buttons]="toastButtons2" message="Are you you want to return back to Hot & Tasty Home page?" [duration]="3000"></ion-toast>
     </ion-toolbar>
   </ion-header>
 <ion-content class="ion-padding">
@@ -265,5 +266,10 @@
       </ion-list>
     </div>
   </ion-accordion>
-</ion-accordion-group>
+</ion-accordion-group><br>
+<ion-button id="toast" color="medium" class="ButtonStyle">Order Takeaway
+  <ion-icon slot="start" name="card"></ion-icon>
+ </ion-button>
+ <ion-toast trigger="toast" icon="card" [buttons]="toastButtons"
+ message="Ready to select your food & drinks?" [duration]="3000"></ion-toast>
 </ion-content>

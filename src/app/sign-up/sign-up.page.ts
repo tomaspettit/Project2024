@@ -30,6 +30,9 @@ export class SignUpPage{
       message: 'You return to Hot & Tasty Home page',
       duration: 3000,
       icon: home,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
     });
     await toast.present();
   }
@@ -77,5 +80,6 @@ export class SignUpPage{
       });
     }
   }
+  
 
 }

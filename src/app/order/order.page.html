@@ -3,7 +3,8 @@
   <ion-content [fullscreen]="true">
   <ion-header>
     <ion-toolbar color="warning">
-      <ion-title (click)="backButton()" class="titleStyle">Hot & Tasty</ion-title>
+      <ion-title id="toast2" class="titleStyle">Hot & Tasty</ion-title>
+      <ion-toast trigger="toast2" icon="home" [buttons]="toastButtons" message="Are you sure you want to return back to Hot & Tasty Home page?" [duration]="3000"></ion-toast>
     </ion-toolbar>
   </ion-header>
   <ion-card>
