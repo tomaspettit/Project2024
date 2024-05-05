@@ -7,7 +7,7 @@ import{ToastController} from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
 import { addIcons} from 'ionicons';
-import { person, lockClosed, alertCircle, checkmarkCircle } from 'ionicons/icons';
+import { home, person, lockClosed, alertCircle, checkmarkCircle } from 'ionicons/icons';
 
 @Component({
   selector: 'app-log-in',
@@ -22,7 +22,16 @@ export class LogInPage{
   e2:string="";
   p2:string="";
   constructor(private storage: Storage, private toastController: ToastController, private router: Router) { 
-    addIcons({person, lockClosed});
+    addIcons({home, person, lockClosed});
+  }
+
+  async backButton(){
+    const toast = await this.toastController.create({
+      message: 'You return to Hot & Tasty Home page',
+      duration: 3000,
+      icon: home,
+    });
+    await toast.present();
   }
 
   async ionViewWillEnter(){

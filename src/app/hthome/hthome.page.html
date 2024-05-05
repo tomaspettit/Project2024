@@ -5,33 +5,33 @@
       <ion-title size="large">Hot & Tasty</ion-title>
     </ion-toolbar>
   </ion-header>
-  <h1 class="label1">OPENING TIMES</h1>
-      <h2  class="label2">Mon - Thurs: 4pm to 12am</h2>
-      <h2 class="label2">Fri - Sat: 4pm to 2am</h2>
-      <h2 class="label2">Sun: 4pm to 12am</h2>
+  <h1 class="label1"><b style="color:red;">OPENING </b><b> TIMES</b></h1>
+      <h2  class="label2"><b>Mon - Thurs: 4pm to 12am</b></h2>
+      <h2 class="label2"><b>Fri - Sat: 4pm to 2am</b></h2>
+      <h2 class="label2"><b>Sun: 4pm to 12am</b></h2>
       
-      <ion-button id="toast" color="primary" class="MenuStyle" [routerLink]="['/home']">Home
+      <ion-button id="toast" color="primary" class="MenuStyle">Home
         <ion-icon slot="start" name="home"></ion-icon>
        </ion-button>
-       <ion-toast trigger="toast" icon="home" message="You return to the Home page" [duration]="5000"></ion-toast>
-       <ion-button id="toast2" color="danger" class="MenuStyle" [routerLink]="['/menu']"> Takeaway Menu
+       <ion-toast trigger="toast" [buttons]="toastButtons3" icon="home" message="Are you sure you want to go home?" [duration]="3000"></ion-toast>
+       <ion-button id="toast2" color="danger" class="MenuStyle"> Takeaway Menu
         <ion-icon slot="start" name="book"></ion-icon>
        </ion-button>
        <ion-toast trigger="toast2" icon="book" [buttons]="toastButtons" 
-       message="Ready to see what's in the menu?" [duration]="5000"></ion-toast>
-       <ion-button id="toast3" color="tertiary" class="MenuStyle" [routerLink]="['/sign-up']">Sign Up
+       message="Ready to see what's in the menu?" [duration]="3000"></ion-toast>
+       <ion-button id="toast3" color="tertiary" class="MenuStyle">Sign Up
         <ion-icon slot="start" name="person-add"></ion-icon>
        </ion-button>
-       <ion-toast trigger="toast3" icon="person-add" message="Prepare to create your own account" [duration]="5000"></ion-toast>
-       <ion-button id="toast4" color="tertiary" class="MenuStyle" [routerLink]="['/log-in']">Log In
+       <ion-toast trigger="toast3" [buttons]="toastButtons4" icon="person-add" message="Are you ready to create your own account?" [duration]="3000"></ion-toast>
+       <ion-button id="toast4" color="tertiary" class="MenuStyle">Log In
         <ion-icon slot="start" name="log-in"></ion-icon>
        </ion-button>
-       <ion-toast trigger="toast4" icon="log-in" message="Log in the same account that you have" [duration]="5000"></ion-toast>
-       <ion-button id="toast5" color="medium" class="MenuStyle" [routerLink]="['/order']">Order Takeaway
+       <ion-toast trigger="toast4" icon="log-in" [buttons]="toastButtons5" message="Do you want to log in your account" [duration]="3000"></ion-toast>
+       <ion-button id="toast5" color="medium" class="MenuStyle">Order Takeaway
         <ion-icon slot="start" name="card"></ion-icon>
        </ion-button>
        <ion-toast trigger="toast5" icon="card" [buttons]="toastButtons2"
-       message="Ready to select your food & drinks?" [duration]="5000"></ion-toast>
+       message="Ready to select your food & drinks?" [duration]="3000"></ion-toast>
        <hr color="dark" style="margin-top: 30px;">
        <p style="margin-top: 25px;" class="ps"><b>Phone No: 090 662 1765</b></p>
        <p class="as"><b>Main St., Creggs, F42EH10</b></p>

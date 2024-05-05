@@ -23,27 +23,70 @@ export class HTHomePage {
     {
       text: 'Yes',
       role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/menu']);
+      },
     },
     {
       text: 'No',
       role: 'cancel',
-      handler: () => {
-        this.router.navigate(['/hthome']);
-      },
+      
     },
   ];
 
   public toastButtons2 = [
     {
-      text: 'Yes',
+      text: 'Yes', 
       role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/order']);
+      },
     },
     {
       text: 'No',
       role: 'cancel',
+    },
+  ];
+
+  public toastButtons3 = [
+    {
+      text: 'Yes', 
+      role: 'agreed',
       handler: () => {
-        this.router.navigate(['/hthome']);
+        this.router.navigate(['/home']);
       },
+    },
+    {
+      text: 'No',
+      role: 'cancel',
+    },
+  ];
+
+  public toastButtons4 = [
+    {
+      text: 'Yes', 
+      role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/sign-up']);
+      },
+    },
+    {
+      text: 'No',
+      role: 'cancel',
+    },
+  ];
+
+  public toastButtons5 = [
+    {
+      text: 'Yes', 
+      role: 'agreed',
+      handler: () => {
+        this.router.navigate(['/log-in']);
+      },
+    },
+    {
+      text: 'No',
+      role: 'cancel',
     },
   ];
 }

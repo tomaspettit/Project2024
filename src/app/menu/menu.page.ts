@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
+import {ToastController} from '@ionic/angular';
+import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { home } from 'ionicons/icons';
 import { logIn } from 'ionicons/icons';
@@ -33,8 +35,18 @@ export class MenuPage implements OnInit {
   sideOrder:any=[];
   wrap:any=[];
 
-  constructor(private fm: FoodMenuService) { 
+  constructor(private fm: FoodMenuService, private toastController: ToastController, private router: Router) { 
     addIcons({home, personAdd, logIn, card});
+  }
+
+  async backButton(){
+    const toast = await this.toastController.create({
+      message: 'You return to Hot & Tasty Home page',
+      duration: 3000,
+      icon: home,
+    });
+    await toast.present();
+    this.router.navigate(['/hthome']);
   }
 
   ngOnInit(): void {

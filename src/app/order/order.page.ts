@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
 import { addIcons } from 'ionicons';
-import {person, call, alertCircle, checkmarkCircle} from 'ionicons/icons';
+import {home, person, call, alertCircle, checkmarkCircle} from 'ionicons/icons';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
@@ -42,7 +42,13 @@ export class OrderPage{
     addIcons({person, call, alertCircle, checkmarkCircle});
   }
 
-  async backHTHome(){
+  async backButton(){
+    const toast = await this.toastController.create({
+      message: 'You return to Hot & Tasty Home page',
+      duration: 3000,
+      icon: home,
+    });
+    await toast.present();
     this.router.navigate(['/hthome']);
     this.email='';
     this.phoneNo='';
@@ -52,7 +58,7 @@ export class OrderPage{
     //Hasn't input them all yet
     if(this.email == '' && this.phoneNo == ''){
         const toast = await this.toastController.create({
-        message: 'Invalid OrderedYou must input your email & your phone No.',
+        message: 'Invalid Ordered! You must input your email & your phone No.',
         duration: 3000,
         icon: alertCircle,
       });
