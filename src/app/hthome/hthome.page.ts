@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterLinkWithHref } from '@angular/router';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { book, logIn, personAdd, home, card, restaurant } from 'ionicons/icons';
+import { book, logIn, personAdd, home, card, helpCircle} from 'ionicons/icons';
 import {ToastController} from '@ionic/angular';
 
 @Component({
@@ -17,13 +17,13 @@ import {ToastController} from '@ionic/angular';
 })
 export class HTHomePage {
   constructor(private router: Router, private toastController: ToastController) { 
-    addIcons({book, logIn, personAdd, home, card});
+    addIcons({book, logIn, personAdd, home, card, helpCircle});
   }
 
   /* For using the toastButtons, you can either click on yes for navigate to another page
   *  or click on no for staying on track */
 
-async navigateHome(){
+async returnHome(){
   const toast = await this.toastController.create({
     message: 'You returning back to Home Page.',
     duration: 3000,
@@ -52,6 +52,30 @@ async navigateHome(){
       message: 'You select order page. Prepared to order your selection of your food & drinks',
       duration: 3000,
       icon: card,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
+    });
+    await toast.present();
+  }
+
+  async navigateSignUp(){
+    const toast = await this.toastController.create({
+      message: 'You select sign up page. Please, create your own account',
+      duration: 3000,
+      icon: personAdd,
+      swipeGesture:"vertical",
+      position:"bottom",
+      positionAnchor:"footer",
+    });
+    await toast.present();
+  }
+
+  async navigateLogIn(){
+    const toast = await this.toastController.create({
+      message: 'You select log in page. Please, log in your own account',
+      duration: 3000,
+      icon: logIn,
       swipeGesture:"vertical",
       position:"bottom",
       positionAnchor:"footer",
@@ -96,12 +120,31 @@ async navigateHome(){
       role: 'agreed',
       handler: () => {
         this.router.navigate(['/home']);
-        this.navigateHome();
+        this.returnHome();
       },
     },
     {
       text: 'No',
       role: 'cancel',
+    },
+  ];
+
+  public toastButtons4 = [
+    {
+      text: 'Sign Up', 
+      role: 'sign-up',
+      handler: () => {
+        this.router.navigate(['/sign-up']);
+        this.navigateSignUp();
+      },
+    },
+    {
+      text: 'Log In',
+      role: 'log-in',
+      handler: () => {
+        this.router.navigate(['/log-in']);
+        this.navigateLogIn();
+      },
     },
   ];
 }

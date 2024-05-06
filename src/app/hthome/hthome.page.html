@@ -19,20 +19,17 @@
        </ion-button>
        <ion-toast trigger="toast2" icon="book" [buttons]="toastButtons" 
        message="Ready to see what's in the menu?" [duration]="3000"></ion-toast>
-       <ion-button id="toast3" color="tertiary" class="MenuStyle" [routerLink]="['/sign-up']">Sign Up
-        <ion-icon slot="start" name="person-add"></ion-icon>
+       <ion-button id="toast3" color="tertiary" class="MenuStyle">Sign Up
+        or Log In
+        <ion-icon slot="start" name="help-circle"></ion-icon>
        </ion-button>
-       <ion-toast trigger="toast3" icon="person-add" message="Sign Up & Create your own account" 
+       <ion-toast trigger="toast3" icon="help-circle" message="Sign Up to create your account or Log In 
+       to your own account" [buttons]="toastButtons4"
        [duration]="3000" swipeGesture="vertical" position="bottom" positionAnchor="footer"></ion-toast>
-       <ion-button id="toast4" color="tertiary" class="MenuStyle" [routerLink]="['/log-in']">Log In
-        <ion-icon slot="start" name="log-in"></ion-icon>
-       </ion-button>
-       <ion-toast trigger="toast4" icon="log-in" message="Log In your account" swipeGesture="vertical"
-       position="bottom" positionAnchor="footer" [duration]="3000"></ion-toast>
-       <ion-button id="toast5" color="medium" class="MenuStyle">Order Takeaway
+       <ion-button id="toast4" color="medium" class="MenuStyle">Order Takeaway
         <ion-icon slot="start" name="card"></ion-icon>
        </ion-button>
-       <ion-toast trigger="toast5" icon="card" [buttons]="toastButtons2"
+       <ion-toast trigger="toast4" icon="card" [buttons]="toastButtons2"
        message="Ready to select your food & drinks?" [duration]="3000"></ion-toast>
        <hr color="dark" style="margin-top: 30px;">
        <p style="margin-top: 25px;" class="ps"><b>Phone No: 090 662 1765</b></p>
