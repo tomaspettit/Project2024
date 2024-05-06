@@ -27,7 +27,6 @@ export class LogInPage{
   }
 
   async ionViewWillEnter(){
-    await this.storage.create();
     this.myEmail = await this.storage.get("email");
     this.myPassword = await this.storage.get("password");
   }
