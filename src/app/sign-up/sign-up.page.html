@@ -44,7 +44,10 @@
           placeholder="Enter your confirm password" [counter]="true" maxLength="20"></ion-input>
         </ion-item><br>
         
+    <!--Sign Up with your email addres & both same passwords-->    
     <ion-button id="bs2" shape="round" (click)="signUp()"><b>Sign Up</b></ion-button><br>
+
+    <!--Already have an account, click 'Log In' to navigate to log in page-->
     <ion-card-content style="font-size:20px;">
     Already have an account? <b><ion-label [routerLink]="['/log-in']" id="toastLogIn">Log In</ion-label></b>
     </ion-card-content>
