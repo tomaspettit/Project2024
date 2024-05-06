@@ -37,8 +37,8 @@ async returnHome(){
 
   async navigateMenu(){
     const toast = await this.toastController.create({
-      message: 'You select menu page. Look at the menu and see what you want. And when your ready click on the order button.',
-      duration: 3000,
+      message: 'You select menu page. Look at the menu and see what you want. And when your ready, go back to the Hot & Tasty Home Page & click the Order Takeaway button.',
+      duration: 7500,
       icon: book,
       swipeGesture:"vertical",
       position:"bottom",
@@ -50,7 +50,7 @@ async returnHome(){
   async navigateOrder(){
     const toast = await this.toastController.create({
       message: 'You select order page. Prepared to order your selection of your food & drinks',
-      duration: 3000,
+      duration: 5000,
       icon: card,
       swipeGesture:"vertical",
       position:"bottom",

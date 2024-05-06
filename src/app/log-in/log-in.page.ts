@@ -25,18 +25,6 @@ export class LogInPage{
     addIcons({home, person, lockClosed});
   }
 
-  async backButton(){
-    const toast = await this.toastController.create({
-      message: 'You return to Hot & Tasty Home page',
-      duration: 3000,
-      icon: home,
-      swipeGesture:"vertical",
-      position:"bottom",
-      positionAnchor:"footer",
-    });
-    await toast.present();
-  }
-
   async ionViewWillEnter(){
     this.myEmail  = await this.storage.get("email");
     this.myPassword = await this.storage.get("password");
@@ -80,21 +68,5 @@ export class LogInPage{
         this.router.navigate(['/menu']);
     }
   }
-
-  public toastButtons = [
-    {
-      text: 'Yes',
-      role: 'agreed',
-      handler: () => {
-        this.router.navigate(['/hthome']);
-        this.backButton();
-      },
-    },
-    {
-      text: 'No',
-      role: 'cancel',
-      
-    },
-  ];
 
 }

@@ -39,18 +39,6 @@ export class MenuPage implements OnInit {
     addIcons({home, personAdd, logIn, card});
   }
 
-  async backButton(){
-    const toast = await this.toastController.create({
-      message: 'You return to Hot & Tasty Home page',
-      duration: 3000,
-      icon: home,
-      swipeGesture:"vertical",
-      position:"bottom",
-      positionAnchor:"footer",
-    });
-    await toast.present();
-  }
-
   async navigateOrder(){
     const toast = await this.toastController.create({
       message: 'You select order page. Prepared to order your selection of your food & drinks',
@@ -70,22 +58,6 @@ export class MenuPage implements OnInit {
       handler: () => {
         this.router.navigate(['/order']);
         this.navigateOrder();
-      },
-    },
-    {
-      text: 'No',
-      role: 'cancel',
-      
-    },
-  ];
-
-  public toastButtons2 = [
-    {
-      text: 'Yes',
-      role: 'agreed',
-      handler: () => {
-        this.router.navigate(['/hthome']);
-        this.backButton();
       },
     },
     {

@@ -25,18 +25,6 @@ export class SignUpPage{
     addIcons({home, person, lockClosed, alertCircle, checkmarkCircle});
   }
 
-  async backButton(){
-    const toast = await this.toastController.create({
-      message: 'You return to Hot & Tasty Home page',
-      duration: 3000,
-      icon: home,
-      swipeGesture:"vertical",
-      position:"bottom",
-      positionAnchor:"footer",
-    });
-    await toast.present();
-  }
-
   async signUp() {
     //Both email & passwords are not input just yet
     if (this.myEmail == '' && this.myPassword == '') {

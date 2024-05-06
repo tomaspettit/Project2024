@@ -1,10 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="warning">
     <!--The ion-back-button is for going back to the hthome page-->
-    <ion-buttons>
-    <ion-back-button (click)="backButton()" defaultHref="/hthome"></ion-back-button>
+    <ion-buttons slot="start">
+      <ion-back-button id="open-toast" defaultHref="/hthome"></ion-back-button>
+    </ion-buttons>
+    <ion-toast trigger="open-toast" icon="home" message="You return to Hot & Tasty Home page" 
+    [duration]="3000" swipeGesture="vertical" position="bottom" positionAnchor="footer"></ion-toast>
     <ion-title>Sign Up</ion-title>
-  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

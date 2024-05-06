@@ -1,10 +1,13 @@
-
 <div class="ion-page" id="main-content">
   <ion-content [fullscreen]="true">
   <ion-header>
     <ion-toolbar color="warning">
-      <ion-title id="toast2" class="titleStyle">Hot & Tasty</ion-title>
-      <ion-toast trigger="toast2" icon="home" [buttons]="toastButtons" message="Are you sure you want to return back to Hot & Tasty Home page?" [duration]="3000"></ion-toast>
+      <ion-buttons id="toast2" slot="start">
+        <ion-back-button defaultHref="/hthome"></ion-back-button>
+      </ion-buttons>
+      <ion-toast trigger="toast2" icon="home" message="You return to Hot & Tasty Home page" 
+      [duration]="3000" swipeGesture="vertical" position="bottom" positionAnchor="footer"></ion-toast>
+      <ion-title>Order Takeaway</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-card>
