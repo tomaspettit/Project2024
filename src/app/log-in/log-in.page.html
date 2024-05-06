@@ -41,8 +41,10 @@
         
     <ion-button id="bs" shape="round" (click)="signIn()"><b>Log In</b></ion-button><br>
     <ion-card-content style="font-size:20px;">
-    Forgot your account? <b><a href="/sign-up">Sign Up</a></b>
+    Forgot your account? <b><ion-label [routerLink]="['/sign-up']" id="toastSignUp">Sign Up</ion-label></b>
     </ion-card-content>
+    <ion-toast trigger="toastSignUp" icon="person-add" message="You select sign up page. Please, create your own account" 
+    swipeGesture="vertical" position="bottom" positionAnchor="footer" [duration]="3000"></ion-toast>
   </ion-card-header>
   </ion-card>
 </ion-content>

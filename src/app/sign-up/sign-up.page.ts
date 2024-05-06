@@ -7,7 +7,7 @@ import{ToastController} from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { home, person, lockClosed, alertCircle, checkmarkCircle } from 'ionicons/icons';
+import { home, person, lockClosed, alertCircle, checkmarkCircle, logIn} from 'ionicons/icons';
 
 @Component({
   selector: 'app-sign-up',
@@ -22,7 +22,7 @@ export class SignUpPage{
   myPassword2: string = '';
 
   constructor(private toastController: ToastController, private storage:Storage, private router:Router) {
-    addIcons({home, person, lockClosed, alertCircle, checkmarkCircle});
+    addIcons({home, person, lockClosed, alertCircle, checkmarkCircle, logIn});
   }
 
   async signUp() {
