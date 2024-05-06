@@ -21,12 +21,14 @@ export class LogInPage{
   myPassword:string="";
   e2:string="";
   p2:string="";
+  account:string="";
   constructor(private storage: Storage, private toastController: ToastController, private router: Router) { 
     addIcons({ home, person, lockClosed, alertCircle, checkmarkCircle, personAdd });
   }
 
   async ionViewWillEnter(){
-    this.myEmail  = await this.storage.get("email");
+    await this.storage.create();
+    this.myEmail = await this.storage.get("email");
     this.myPassword = await this.storage.get("password");
   }
 

@@ -18,11 +18,10 @@ import { home, person, lockClosed, alertCircle, checkmarkCircle, logIn} from 'io
 })
 export class SignUpPage{
   myEmail: string = '';
+  sameEmail:string='';
   myPassword: string = '';
+  samePassword:string='';
   myPassword2: string = '';
-  sameEmail: string = '';
-  samePassword: string = '';
-  samePassword2: string = '';
 
   constructor(private toastController: ToastController, private storage:Storage, private router:Router) {
     addIcons({home, person, lockClosed, alertCircle, checkmarkCircle, logIn});
@@ -30,7 +29,7 @@ export class SignUpPage{
 
   async ionViewWillEnter(){
     this.sameEmail  = await this.storage.get("email");
-    this.samePassword = await this.storage.get("password");
+    this.samePassword  = await this.storage.get("password");
   }
 
   async signUp() {
@@ -54,7 +53,7 @@ export class SignUpPage{
       await toast.present();
     } 
     //Same email & password that you created you account already
-    else if(this.myEmail == this.sameEmail && this.myPassword == this.samePassword  && this.myPassword2 == this.samePassword2){
+    else if(this.myEmail == this.sameEmail && this.myPassword == this.samePassword){
       const toast = await this.toastController.create({
         message: 'Invalid Signing Up. Already create your account',
         duration: 3000,
