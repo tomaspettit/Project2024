@@ -42,6 +42,7 @@ export class OrderPage{
     addIcons({person, call, alertCircle, checkmarkCircle});
   }
 
+  //Back to hthome page
   async backButton(){
     const toast = await this.toastController.create({
       message: 'You return to Hot & Tasty Home page',
@@ -70,6 +71,11 @@ export class OrderPage{
       await toast.present();
     }
     //All has been input
+    /* Once you input your email, phone number and the selecting your food & drinks,
+    *  it can send to Hot & Tasty Takeaway phone number: 090 662 1765.
+    *  And it would send you message for how long does it take for you to serve, so
+    *  you will go to collect your takeaway at the EirCode and that is F42EH10
+    */
     else{
         const toast = await this.toastController.create({
         message: 'Ordering Food Success. Thank you for ordering at the Hot & Tasty Takeaway',

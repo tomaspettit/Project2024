@@ -5,22 +5,27 @@
       <ion-title size="large">Hot & Tasty</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!--Opening Times-->
   <h1 class="label1"><b style="color:red;">OPENING </b><b> TIMES</b></h1>
       <h2  class="label2"><b>Mon - Thurs: 4pm to 12am</b></h2>
       <h2 class="label2"><b>Fri - Sat: 4pm to 2am</b></h2>
       <h2 class="label2"><b>Sun: 4pm to 12am</b></h2>
       
-      <!-- Incase one of the buttons is not navigate to the other page, refresh it and it wiil work!
-      Like Menu Button & Order Button-->
+      <!--Back to Home Page-->
       <ion-button id="toast" color="primary" class="MenuStyle">Home
         <ion-icon slot="start" name="home"></ion-icon>
        </ion-button>
        <ion-toast trigger="toast" [buttons]="toastButtons3" icon="home" message="Are you sure you want to go home?" [duration]="3000"></ion-toast>
+
+       <!--Navigate to Takeaway Menu Page-->
        <ion-button id="toast2" color="danger" class="MenuStyle">Takeaway Menu
         <ion-icon slot="start" name="book"></ion-icon>
        </ion-button>
        <ion-toast trigger="toast2" icon="book" [buttons]="toastButtons" 
        message="Ready to see what's in the menu?" [duration]="3000"></ion-toast>
+
+       <!--Either Sign Up or Log In-->
        <ion-button id="toast3" color="tertiary" class="MenuStyle">Sign Up
         or Log In
         <ion-icon slot="start" name="help-circle"></ion-icon>
@@ -28,12 +33,16 @@
        <ion-toast trigger="toast3" icon="help-circle" message="Sign Up to create your account or Log In 
        to your own account" [buttons]="toastButtons4"
        [duration]="3000" swipeGesture="vertical" position="bottom" positionAnchor="footer"></ion-toast>
+
+       <!--Navigate to Order Takeaway page-->
        <ion-button id="toast4" color="medium" class="MenuStyle">Order Takeaway
         <ion-icon slot="start" name="card"></ion-icon>
        </ion-button>
        <ion-toast trigger="toast4" icon="card" [buttons]="toastButtons2"
        message="Ready to select your food & drinks?" [duration]="3000"></ion-toast>
        <hr color="dark" style="margin-top: 30px;">
+
+       <!--Their Phone Number & Eircode Address-->
        <p style="margin-top: 25px;" class="ps"><b>Phone No: 090 662 1765</b></p>
        <p class="as"><b>Main St., Creggs, F42EH10</b></p>
 </ion-content>

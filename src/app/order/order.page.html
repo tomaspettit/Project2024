@@ -19,16 +19,23 @@
         When you had it done, ignore the rest of the selction and click enter and add another order for your takeaway.</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
+
+      <!--Email Address-->
       <ion-item>
       <ion-icon slot="start" name="person" color="secondary"></ion-icon>
       <ion-input [clearInput]="true" [(ngModel)]="email" label="Enter your email" label-placement="floating" fill="outline" type="email" placeholder="email@domain.com"></ion-input>
       </ion-item><br>
+
+      <!--Phone Number-->
       <ion-item>
       <ion-icon slot="start" name="call" color="secondary"></ion-icon>
       <ion-input [clearInput]="true" [(ngModel)]="phoneNo" label="Enter your telephone no." label-placement="floating" fill="outline" type="tel" placeholder="888-888-8888"></ion-input>
     </ion-item><br>
 
     <!--Selection of Food Menu-->
+    <!--I used the service API key for the Selection of Food Menu-->
+
+    <!--Chips-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customChips" interface="alert" placeholder="Chips" [multiple]="true">
@@ -51,6 +58,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Burger-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customBurger" interface="alert" placeholder="Burger" [multiple]="true">
@@ -70,6 +79,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Kebab-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customKebab" interface="alert" placeholder="Kebab" [multiple]="true">
@@ -89,6 +100,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Wraps-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customWraps" interface="alert" placeholder="Wraps" [multiple]="true">
@@ -108,6 +121,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Side Order-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customSideOrder" interface="alert" placeholder="Side Order" [multiple]="true">
@@ -127,6 +142,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Fish-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customFish" interface="alert" placeholder="Fish" [multiple]="true">
@@ -146,6 +163,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Fried Chicken-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customFriedChicken" interface="alert" placeholder="Fried Chicken" [multiple]="true">
@@ -165,6 +184,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Kids Meal-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customKidsMeal" interface="alert" placeholder="Kids Meal" [multiple]="true">
@@ -184,6 +205,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Meal Deals-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customMealDeals" interface="alert" placeholder="Meal Deals" [multiple]="true">
@@ -203,6 +226,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Beverage or Drinks-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customBeverages" interface="alert" placeholder="Beverages" [multiple]="true">
@@ -222,6 +247,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--Sauces-->
     <ion-list>
       <ion-item>
         <ion-select [interfaceOptions]="customSauce" interface="alert" placeholder="Sauces" [multiple]="true">
@@ -241,6 +268,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+
+    <!--This is for what you want with something? Eg. with onions or with no onions-->
     <ion-textarea labelPlacement="floating" label="Is there anything that you want with something?" placeholder="Eg. with onions or no onions on the burger"
     [autoGrow]="true" [clearOnEdit]="true" [counter]="true" maxlength="100"></ion-textarea>
     </ion-card-content>

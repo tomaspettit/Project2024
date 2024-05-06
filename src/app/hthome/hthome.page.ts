@@ -134,7 +134,7 @@ async returnHome(){
       text: 'Sign Up', 
       role: 'sign-up',
       handler: () => {
-        this.router.navigate(['/sign-up']);
+        this.router.navigate(['/sign-up']); //Navigate to Sign Up page
         this.navigateSignUp();
       },
     },
@@ -142,7 +142,7 @@ async returnHome(){
       text: 'Log In',
       role: 'log-in',
       handler: () => {
-        this.router.navigate(['/log-in']);
+        this.router.navigate(['/log-in']); //Navigate to Log In page
         this.navigateLogIn();
       },
     },
