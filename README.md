@@ -1,5 +1,5 @@
 <h1><b>Multi-Takeaway<b></h1>
-  <p>Welcome to the Multi-Takeaway 🍽️, a number of takeaway's app! It would able to select which takeaway you like to order online for what is the nearest takeaway that would enjoyed the most times at the takeaway on your app.</p><br>
+  <p>Welcome to the Multi-Takeaway 🍽️, a number of takeaway's app! It would able to select which takeaway you like to order online for what is the nearest takeaway that would enjoyed the most times at the takeaway on your app.</p>
 
   <h2><b>Features</b></h2>
   <ul>
@@ -17,7 +17,7 @@
     <li>Install the necessary dependencies: npm install</li>
     <li>Run the app: ionic serve</li>
   </ol>
-  <p>This will start a development server. Open your browser and navigate to http://localhost:8100 to view the app</p><br>
+  <p>This will start a development server. Open your browser and navigate to http://localhost:8100 to view the app</p>
 
   <h2><b>Technologies Used</b></h2>
   <ul>
