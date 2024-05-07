@@ -1,5 +1,5 @@
 <h1><b>Multi-Takeaway<b></h1>
-  <p>Welcome to the Multi-Takeaway 🍽️, a number of takeaway's app! It would able to select which takeaway you like to order online for what is the nearest takeaway that would enjoyed the most times at the takeaway on your app.</p>
+  <p>Welcome to the Multi-Takeaway 🍽️, a number of takeaway's in one app! It would able to select which takeaway you like to order online for what is the nearest takeaway that would enjoyed the most times at the takeaway on your app.</p>
 
   <h2><b>Features</b></h2>
   <ul>
